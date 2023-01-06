@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67dd99a4aeed42c983c7349d6984856e" Name="Diagram1">
+        <EntityTypeShape EntityType="mahalleMarketiModel.cariSatis" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.irsaliye" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.musteri" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.odeme" Width="1.5" PointX="9.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.pesinSatis" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.tedarikci" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.urun" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.urunListesi" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.market" Width="1.5" PointX="4.625" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__mNo__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__mNo__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__ulNo__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__ulNo__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__tNo__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__tNo__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__ulNo__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__ulNo__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__urun__irsaliyeNo__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__urun__irsaliyeNo__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__odeme__mNo__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__odeme__mNo__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__pesinSatis__ulNo__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__pesinSatis__ulNo__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__urunListe__urunK__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__urunListe__urunK__571DF1D5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
