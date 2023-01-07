@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ﻿<configuration>
     <configSections>
         <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
     </configSections>
 </configuration>
+=======
+﻿<configuration>
+    <configSections>
+        <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    </configSections>
+</configuration>
+>>>>>>> 08c4c02 (hesaplama fonksyonu tamamlandı)
