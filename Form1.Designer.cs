@@ -48,63 +48,69 @@ namespace bizmar
             this.btekle = new System.Windows.Forms.Button();
             this.btsil = new System.Windows.Forms.Button();
             this.bttemizle = new System.Windows.Forms.Button();
+            this.bbul = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(56, 86);
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(21, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(127, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün Kodu";
+            this.label1.Text = "Ürün Kodu  ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(56, 120);
+            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(21, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
+            this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Barkod No";
+            this.label2.Text = "Barkod No  ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(46, 154);
+            this.label3.BackColor = System.Drawing.Color.SteelBlue;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(21, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stok Miktarı";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(51, 188);
+            this.label4.BackColor = System.Drawing.Color.SteelBlue;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(21, 193);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 20);
+            this.label4.Size = new System.Drawing.Size(125, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Satış Fiyatı";
+            this.label4.Text = "Satış Fiyatı ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(56, 219);
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(21, 227);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 20);
+            this.label5.Size = new System.Drawing.Size(120, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "İrsaliye No";
+            this.label5.Text = "İrsaliye No ";
             // 
             // txturunKod
             // 
             this.txturunKod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txturunKod.Location = new System.Drawing.Point(162, 78);
+            this.txturunKod.Location = new System.Drawing.Point(166, 91);
             this.txturunKod.Name = "txturunKod";
             this.txturunKod.Size = new System.Drawing.Size(146, 28);
             this.txturunKod.TabIndex = 5;
@@ -112,7 +118,7 @@ namespace bizmar
             // txtBarkod
             // 
             this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkod.Location = new System.Drawing.Point(162, 112);
+            this.txtBarkod.Location = new System.Drawing.Point(166, 125);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(146, 28);
             this.txtBarkod.TabIndex = 6;
@@ -120,7 +126,7 @@ namespace bizmar
             // txtStok
             // 
             this.txtStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStok.Location = new System.Drawing.Point(162, 146);
+            this.txtStok.Location = new System.Drawing.Point(166, 159);
             this.txtStok.Name = "txtStok";
             this.txtStok.Size = new System.Drawing.Size(146, 28);
             this.txtStok.TabIndex = 7;
@@ -128,7 +134,7 @@ namespace bizmar
             // txtsatis
             // 
             this.txtsatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtsatis.Location = new System.Drawing.Point(162, 180);
+            this.txtsatis.Location = new System.Drawing.Point(166, 193);
             this.txtsatis.Name = "txtsatis";
             this.txtsatis.Size = new System.Drawing.Size(146, 28);
             this.txtsatis.TabIndex = 8;
@@ -136,7 +142,7 @@ namespace bizmar
             // txtirsaliye
             // 
             this.txtirsaliye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtirsaliye.Location = new System.Drawing.Point(162, 214);
+            this.txtirsaliye.Location = new System.Drawing.Point(166, 227);
             this.txtirsaliye.Name = "txtirsaliye";
             this.txtirsaliye.Size = new System.Drawing.Size(146, 28);
             this.txtirsaliye.TabIndex = 9;
@@ -145,7 +151,7 @@ namespace bizmar
             // 
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.urunKodu,
@@ -153,12 +159,12 @@ namespace bizmar
             this.stokMiktari,
             this.satisFiyati,
             this.irsaliyeNo});
-            this.dgv.Location = new System.Drawing.Point(380, 20);
+            this.dgv.Location = new System.Drawing.Point(365, 52);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(737, 489);
+            this.dgv.Size = new System.Drawing.Size(774, 546);
             this.dgv.TabIndex = 10;
             this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
@@ -208,40 +214,54 @@ namespace bizmar
             // 
             // btekle
             // 
-            this.btekle.Location = new System.Drawing.Point(158, 281);
+            this.btekle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btekle.Location = new System.Drawing.Point(116, 310);
             this.btekle.Name = "btekle";
-            this.btekle.Size = new System.Drawing.Size(150, 55);
+            this.btekle.Size = new System.Drawing.Size(196, 55);
             this.btekle.TabIndex = 11;
             this.btekle.Text = "EKLE";
-            this.btekle.UseVisualStyleBackColor = true;
+            this.btekle.UseVisualStyleBackColor = false;
             this.btekle.Click += new System.EventHandler(this.btekle_Click);
             // 
             // btsil
             // 
-            this.btsil.Location = new System.Drawing.Point(158, 342);
+            this.btsil.BackColor = System.Drawing.Color.Crimson;
+            this.btsil.Location = new System.Drawing.Point(116, 382);
             this.btsil.Name = "btsil";
-            this.btsil.Size = new System.Drawing.Size(150, 55);
+            this.btsil.Size = new System.Drawing.Size(196, 55);
             this.btsil.TabIndex = 12;
             this.btsil.Text = "SİL";
-            this.btsil.UseVisualStyleBackColor = true;
+            this.btsil.UseVisualStyleBackColor = false;
             this.btsil.Click += new System.EventHandler(this.btsil_Click);
             // 
             // bttemizle
             // 
-            this.bttemizle.Location = new System.Drawing.Point(158, 403);
+            this.bttemizle.BackColor = System.Drawing.Color.Cyan;
+            this.bttemizle.Location = new System.Drawing.Point(116, 456);
             this.bttemizle.Name = "bttemizle";
-            this.bttemizle.Size = new System.Drawing.Size(150, 60);
+            this.bttemizle.Size = new System.Drawing.Size(196, 60);
             this.bttemizle.TabIndex = 13;
             this.bttemizle.Text = "TEMİZLE";
-            this.bttemizle.UseVisualStyleBackColor = true;
+            this.bttemizle.UseVisualStyleBackColor = false;
             this.bttemizle.Click += new System.EventHandler(this.bttemizle_Click);
+            // 
+            // bbul
+            // 
+            this.bbul.Location = new System.Drawing.Point(116, 537);
+            this.bbul.Name = "bbul";
+            this.bbul.Size = new System.Drawing.Size(196, 56);
+            this.bbul.TabIndex = 14;
+            this.bbul.Text = "Bul";
+            this.bbul.UseVisualStyleBackColor = true;
+            this.bbul.Click += new System.EventHandler(this.bbul_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1194, 711);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(1204, 711);
+            this.Controls.Add(this.bbul);
             this.Controls.Add(this.bttemizle);
             this.Controls.Add(this.btsil);
             this.Controls.Add(this.btekle);
@@ -287,6 +307,7 @@ namespace bizmar
         private System.Windows.Forms.DataGridViewTextBoxColumn stokMiktari;
         private System.Windows.Forms.DataGridViewTextBoxColumn satisFiyati;
         private System.Windows.Forms.DataGridViewTextBoxColumn irsaliyeNo;
+        private System.Windows.Forms.Button bbul;
     }
 }
 

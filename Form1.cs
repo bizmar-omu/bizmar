@@ -106,11 +106,18 @@ namespace bizmar
                         db.urun.Remove(model);  
                         db.SaveChanges();
                         LoadData();
-                        clear();
+                        clear();                      
                         MessageBox.Show("Silme islemi basarili sekilde tamamlandi");
                     }
                 }
             }
+        }
+
+        private void bbul_Click(object sender, EventArgs e)
+        {
+           mahalleMarketiEntities db = new mahalleMarketiEntities();
+           int urun = Convert.ToInt32(txturunKod.Text);   
+           dgv.DataSource = db.urun.Where(x => x.urunKodu == (urun)).ToList(); 
         }
     }
 }

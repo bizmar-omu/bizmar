@@ -131,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="EFbizmar.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -164,6 +165,7 @@
       <DependentUpon>EFbizmar.edmx</DependentUpon>
       <LastGenOutput>EFbizmar.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\FWr6T5MXkAMxxjK.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
