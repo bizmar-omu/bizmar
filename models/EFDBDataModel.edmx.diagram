@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f96c6cb8db2498cacd885a75873d254" Name="Diagram1">
+        <EntityTypeShape EntityType="EFDBModel.cariSatis" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.irsaliye" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.musteri" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.odeme" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.pesinSatis" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.tedarikci" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.urun" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.urunListesi" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EFDBModel.market" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="EFDBModel.FK__cariSatis__mNo__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__cariSatis__ulNo__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__irsaliye__tNo__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__irsaliye__ulNo__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__odeme__mNo__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__pesinSatis__ulNo__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="EFDBModel.FK__urunListe__urunK__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
