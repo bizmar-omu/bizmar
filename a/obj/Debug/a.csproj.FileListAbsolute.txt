@@ -7,10 +7,12 @@ C:\Users\Terea\source\repos\a\a\bin\Debug\EntityFramework.xml
 C:\Users\Terea\source\repos\a\a\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.AssemblyReference.cache
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.SuggestedBindingRedirects.cache
-C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form1.resources
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.Properties.Resources.resources
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.GenerateResource.cache
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.CoreCompileInputs.cache
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.CopyComplete
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.exe
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.pdb
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form2.resources
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form3.resources
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form1.resources
