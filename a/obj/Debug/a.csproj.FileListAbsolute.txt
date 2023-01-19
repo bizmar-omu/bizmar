@@ -16,3 +16,6 @@ C:\Users\Terea\source\repos\a\a\obj\Debug\a.pdb
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form2.resources
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form3.resources
 C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form1.resources
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form4.resources
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.csproj.ResolveComReference.cache
+C:\Users\Terea\source\repos\a\a\obj\Debug\a.Form5.resources

@@ -25,6 +25,7 @@ namespace a
         public int stokMiktari { get; set; }
         public double satisFiyati { get; set; }
         public int irsaliyeNo { get; set; }
+        public string urunAd { get; set; }
     
         public virtual irsaliye irsaliye { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

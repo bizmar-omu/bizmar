@@ -13,6 +13,8 @@ namespace a
     public partial class Form3 : Form
     {
         musteri model = new musteri();
+        odeme model2 = new odeme();
+
         public Form3()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace a
         private void btamam_Click(object sender, EventArgs e)
         {
             Hesaplama();
+            ode();
             Clear();
             Loaddata();
         }
@@ -37,9 +40,17 @@ namespace a
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             Clear();
             this.ActiveControl = txtmno;
             Loaddata();
+           
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                odeme sonsatis = db.odeme.ToList<odeme>().Last<odeme>();
+                model2.odemeNo = sonsatis.odemeNo + 1;
+                textBox1.Text = (model2.odemeNo).ToString();
+            }
         }
 
         private void txttborc_TextChanged(object sender, EventArgs e)
@@ -71,6 +82,24 @@ namespace a
             } 
         }
 
+        void ode()
+        {
+            model2.mNo = int.Parse(txtmno.Text.Trim());
+            model2.odemeTutari = int.Parse(txtodenecek.Text.Trim());
+            model2.odemeTarihi = dateTimePicker1.Value;
+            model2.odemeNo = int.Parse(textBox1.Text.Trim());
+            using(mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {    
+                db.odeme.Add(model2);
+                db.SaveChanges();
+            }
+
+        }
+
+
+
+
+
         void Hesaplama()
         {
             using (mahalleMarketiEntities db = new mahalleMarketiEntities())
@@ -89,6 +118,30 @@ namespace a
             mahalleMarketiEntities db = new mahalleMarketiEntities();
             int musteri = Convert.ToInt32(txtmno.Text);
             dataGridView2.DataSource = db.musteri.Where(x => x.mNo == (musteri)).ToList();
+        }
+
+        private void brapor_Click(object sender, EventArgs e)
+        {
+            Form4 frm4 = new Form4();
+            frm4.txtno.Text = txtmno.Text;
+            frm4.Show();
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label5.Text = DateTime.Now.ToLongDateString();
+            label4.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

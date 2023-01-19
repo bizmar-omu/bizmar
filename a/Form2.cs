@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace a
     public partial class Form2 : Form
     {
         tedarikci model2 = new tedarikci();
+        todeme model = new todeme();
         public Form2()
         {
             InitializeComponent();
@@ -22,12 +24,20 @@ namespace a
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             Clear();
             this.ActiveControl = txttno;
             Loaddata();
 
-        }
 
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                todeme sonsatis = db.todeme.ToList<todeme>().Last<todeme>();
+                model.todemeNo = sonsatis.todemeNo + 1;
+                textBox1.Text = (model.todemeNo).ToString();
+
+            }
+        }
 
         private void txtttborc_TextChanged(object sender, EventArgs e)
         {
@@ -39,6 +49,7 @@ namespace a
         private void btamam_Click(object sender, EventArgs e)
         {
             Hesaplama();
+            ode();
             Clear();
             Loaddata();
         }
@@ -103,6 +114,49 @@ namespace a
             int tedarikci = Convert.ToInt32(txttno.Text);
             dataGridView3.DataSource = db.tedarikci.Where(x => x.tNo == (tedarikci)).ToList();
         }
+
+        private void txttodenecek_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonr_Click(object sender, EventArgs e)
+        {
+            Form5 frm5 = new Form5();
+            frm5.txtno.Text = txttno.Text;
+            frm5.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label5.Text = DateTime.Now.ToLongDateString();
+            label4.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+
+        void ode()
+        {
+            model.tNo = int.Parse(txttno.Text.Trim());
+            model.odenenTutar = int.Parse(txttodenecek.Text.Trim());
+            model.odenenTarih = dateTimePicker1.Value;
+            model.todemeNo = int.Parse(textBox1.Text.Trim());
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                db.todeme.Add(model);
+                db.SaveChanges();
+            }
+
+        }
+
     }
 
 }
