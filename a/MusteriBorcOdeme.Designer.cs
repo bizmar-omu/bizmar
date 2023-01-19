@@ -1,6 +1,6 @@
 ﻿namespace a
 {
-    partial class Form3
+    partial class MusteriBorcOdeme
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.

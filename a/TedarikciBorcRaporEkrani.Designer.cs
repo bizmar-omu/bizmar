@@ -33,13 +33,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtno = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.odemeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.odemeTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.odemeTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtno = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,30 +87,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(891, 314);
             this.dataGridView1.TabIndex = 18;
             // 
-            // txtno
-            // 
-            this.txtno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtno.Location = new System.Drawing.Point(174, 84);
-            this.txtno.Name = "txtno";
-            this.txtno.Size = new System.Drawing.Size(114, 28);
-            this.txtno.TabIndex = 17;
-            this.txtno.TextChanged += new System.EventHandler(this.txtno_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 22);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Müşteri No:";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // odemeNo
             // 
             this.odemeNo.DataPropertyName = "todemeNo";
@@ -139,6 +115,30 @@
             this.odemeTarih.MinimumWidth = 6;
             this.odemeTarih.Name = "odemeTarih";
             // 
+            // txtno
+            // 
+            this.txtno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtno.Location = new System.Drawing.Point(174, 84);
+            this.txtno.Name = "txtno";
+            this.txtno.Size = new System.Drawing.Size(114, 28);
+            this.txtno.TabIndex = 17;
+            this.txtno.TextChanged += new System.EventHandler(this.txtno_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 22);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Müşteri No:";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,7 +151,7 @@
             this.Controls.Add(this.txtno);
             this.Controls.Add(this.label1);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "Tedarikçi Borç Rapor Ekranı";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

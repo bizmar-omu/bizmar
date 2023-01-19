@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace a
 {
-    public partial class Form3 : Form
+    public partial class MusteriBorcOdeme : Form
     {
         musteri model = new musteri();
         odeme model2 = new odeme();
 
-        public Form3()
+        public MusteriBorcOdeme()
         {
             InitializeComponent();
         }
