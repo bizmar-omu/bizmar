@@ -16,8 +16,6 @@ namespace Satış
         urun model2 = new urun();
         mahalleMarketiEntities db = new mahalleMarketiEntities();
 
-        urun[] sepet = { };
-
         void Clear()
         {
             txtbarkodNo.Text = txtsatisfiyat.Text = txtmiktar.Text ="";
@@ -128,8 +126,46 @@ namespace Satış
             txttoplam.Text =toplam.ToString();
         }
 
+        void sayaciArttir()
+        {
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                sayac urunSayaci = db.sayac.Where(x => x.urunKodu == model2.urunKodu).FirstOrDefault();
+                
+                if(urunSayaci == null)
+                {
+                    sayac sonSayac = db.sayac.ToList<sayac>().LastOrDefault<sayac>();
+                    int sonSayacNo = sonSayac != null ? sonSayac.sayacNo + 1 : 0;
 
+                    urunSayaci = new sayac();
+                    urunSayaci.sayacNo = sonSayacNo;
+                    urunSayaci.urunKodu = model2.urunKodu;
+                    urunSayaci.urunSayaci = 0;
 
+                    db.sayac.Add(urunSayaci);
+                }
+
+                int urunMevcutSayaci = urunSayaci.urunSayaci;
+                int satilanMiktar = Convert.ToInt32(txtmiktar.Text);
+                urunSayaci.urunSayaci = urunMevcutSayaci + satilanMiktar;
+
+                db.SaveChanges();
+            }
+        }
+
+        void sayaciAzalt()
+        {
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                sayac urunSayaci = db.sayac.Where(x => x.urunKodu == model2.urunKodu).FirstOrDefault();
+                int urunMevcutSayaci = urunSayaci.urunSayaci;
+                int satilanMiktar = Convert.ToInt32(txtmiktar.Text);
+                urunSayaci.urunSayaci = urunMevcutSayaci - satilanMiktar;
+
+                db.SaveChanges();
+            }
+        }
+        
         void miktarazalat()
         {
             using (mahalleMarketiEntities db = new mahalleMarketiEntities())
@@ -144,6 +180,8 @@ namespace Satış
                     MessageBox.Show("Bu urunden 10 adetten az kalmistir.");
                 }
             }
+
+            sayaciArttir();
         }
 
         void miktararttır()
@@ -157,6 +195,8 @@ namespace Satış
                 db.SaveChanges();
 
             }
+
+            sayaciAzalt();
 
         }
 

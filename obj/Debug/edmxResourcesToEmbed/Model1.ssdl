@@ -90,6 +90,14 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <Property Name="psNo" Type="int" Nullable="false" />
     <Property Name="psuAd" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
+  <EntityType Name="sayac">
+    <Key>
+      <PropertyRef Name="sayacNo" />
+    </Key>
+    <Property Name="sayacNo" Type="int" Nullable="false" />
+    <Property Name="urunKodu" Type="int" Nullable="false" />
+    <Property Name="urunSayaci" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="tedarikci">
     <Key>
       <PropertyRef Name="tNo" />
@@ -180,6 +188,18 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__sayac__urunKodu__6FE99F9F">
+    <End Role="urun" Type="Self.urun" Multiplicity="1" />
+    <End Role="sayac" Type="Self.sayac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunKodu" />
+      </Principal>
+      <Dependent Role="sayac">
+        <PropertyRef Name="urunKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="mahalleMarketiModelStoreContainer">
     <EntitySet Name="cariSatis" EntityType="Self.cariSatis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cariSatisUrunu" EntityType="Self.cariSatisUrunu" Schema="dbo" store:Type="Tables" />
@@ -189,6 +209,7 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <EntitySet Name="odeme" EntityType="Self.odeme" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="pesinSatisUrunu" EntityType="Self.pesinSatisUrunu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayac" EntityType="Self.sayac" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tedarikci" EntityType="Self.tedarikci" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="market" EntityType="Self.market" store:Type="Tables" store:Schema="dbo">
@@ -220,6 +241,10 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <AssociationSet Name="FK__pesinSatis__psNo__5FB337D6" Association="Self.FK__pesinSatis__psNo__5FB337D6">
       <End Role="pesinSatis" EntitySet="pesinSatis" />
       <End Role="pesinSatisUrunu" EntitySet="pesinSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sayac__urunKodu__6FE99F9F" Association="Self.FK__sayac__urunKodu__6FE99F9F">
+      <End Role="urun" EntitySet="urun" />
+      <End Role="sayac" EntitySet="sayac" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

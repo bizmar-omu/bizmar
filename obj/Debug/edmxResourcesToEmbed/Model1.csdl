@@ -91,6 +91,15 @@
     <Property Name="psuAd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="pesinSatis" Relationship="Self.FK__pesinSatis__psNo__5FB337D6" FromRole="pesinSatisUrunu" ToRole="pesinSatis" />
   </EntityType>
+  <EntityType Name="sayac">
+    <Key>
+      <PropertyRef Name="sayacNo" />
+    </Key>
+    <Property Name="sayacNo" Type="Int32" Nullable="false" />
+    <Property Name="urunKodu" Type="Int32" Nullable="false" />
+    <Property Name="urunSayaci" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="urun" Relationship="Self.FK__sayac__urunKodu__6FE99F9F" FromRole="sayac" ToRole="urun" />
+  </EntityType>
   <EntityType Name="tedarikci">
     <Key>
       <PropertyRef Name="tNo" />
@@ -109,6 +118,7 @@
     <Property Name="stokMiktari" Type="Int32" Nullable="false" />
     <Property Name="satisFiyati" Type="Double" Nullable="false" />
     <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="sayac" Relationship="Self.FK__sayac__urunKodu__6FE99F9F" FromRole="urun" ToRole="sayac" />
   </EntityType>
   <EntityType Name="market">
     <Key>
@@ -190,6 +200,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__sayac__urunKodu__6FE99F9F">
+    <End Role="urun" Type="Self.urun" Multiplicity="1" />
+    <End Role="sayac" Type="Self.sayac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunKodu" />
+      </Principal>
+      <Dependent Role="sayac">
+        <PropertyRef Name="urunKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="mahalleMarketiEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="cariSatis" EntityType="Self.cariSatis" />
     <EntitySet Name="cariSatisUrunu" EntityType="Self.cariSatisUrunu" />
@@ -199,6 +221,7 @@
     <EntitySet Name="odeme" EntityType="Self.odeme" />
     <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" />
     <EntitySet Name="pesinSatisUrunu" EntityType="Self.pesinSatisUrunu" />
+    <EntitySet Name="sayac" EntityType="Self.sayac" />
     <EntitySet Name="tedarikci" EntityType="Self.tedarikci" />
     <EntitySet Name="urun" EntityType="Self.urun" />
     <EntitySet Name="market" EntityType="Self.market" />
@@ -225,6 +248,10 @@
     <AssociationSet Name="FK__pesinSatis__psNo__5FB337D6" Association="Self.FK__pesinSatis__psNo__5FB337D6">
       <End Role="pesinSatis" EntitySet="pesinSatis" />
       <End Role="pesinSatisUrunu" EntitySet="pesinSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sayac__urunKodu__6FE99F9F" Association="Self.FK__sayac__urunKodu__6FE99F9F">
+      <End Role="urun" EntitySet="urun" />
+      <End Role="sayac" EntitySet="sayac" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

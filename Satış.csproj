@@ -132,6 +132,9 @@
     <Compile Include="satisTuru.Designer.cs">
       <DependentUpon>satisTuru.cs</DependentUpon>
     </Compile>
+    <Compile Include="sayac.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tedarikci.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

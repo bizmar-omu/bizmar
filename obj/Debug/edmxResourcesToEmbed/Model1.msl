@@ -89,6 +89,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sayac">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.sayac">
+        <MappingFragment StoreEntitySet="sayac">
+          <ScalarProperty Name="sayacNo" ColumnName="sayacNo" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="urunSayaci" ColumnName="urunSayaci" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tedarikci">
       <EntityTypeMapping TypeName="mahalleMarketiModel.tedarikci">
         <MappingFragment StoreEntitySet="tedarikci">

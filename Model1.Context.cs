@@ -33,6 +33,7 @@ namespace Satış
         public virtual DbSet<odeme> odeme { get; set; }
         public virtual DbSet<pesinSatis> pesinSatis { get; set; }
         public virtual DbSet<pesinSatisUrunu> pesinSatisUrunu { get; set; }
+        public virtual DbSet<sayac> sayac { get; set; }
         public virtual DbSet<tedarikci> tedarikci { get; set; }
         public virtual DbSet<urun> urun { get; set; }
         public virtual DbSet<market> market { get; set; }
