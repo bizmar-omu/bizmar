@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="mahalleMarketiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="cariSatis">
@@ -378,4 +379,320 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
       <End Role="todeme" EntitySet="todeme" />
     </AssociationSet>
   </EntityContainer>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mahalleMarketiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cariSatis">
+    <Key>
+      <PropertyRef Name="csNo" />
+    </Key>
+    <Property Name="csNo" Type="int" Nullable="false" />
+    <Property Name="csTarih" Type="date" Nullable="false" />
+    <Property Name="csTutar" Type="float" Nullable="false" />
+    <Property Name="mNo" Type="int" />
+  </EntityType>
+  <EntityType Name="cariSatisUrunu">
+    <Key>
+      <PropertyRef Name="csuNo" />
+    </Key>
+    <Property Name="csuNo" Type="int" Nullable="false" />
+    <Property Name="csuBarkodNo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="csuAd" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="csuMiktar" Type="int" Nullable="false" />
+    <Property Name="csuFiyat" Type="float" Nullable="false" />
+    <Property Name="csNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="irsaliye">
+    <Key>
+      <PropertyRef Name="irsaliyeNo" />
+    </Key>
+    <Property Name="irsaliyeNo" Type="int" Nullable="false" />
+    <Property Name="irsaliyeTarih" Type="date" Nullable="false" />
+    <Property Name="irsaliyeTutar" Type="float" Nullable="false" />
+    <Property Name="tNo" Type="int" />
+  </EntityType>
+  <EntityType Name="irsaliyeUrunu">
+    <Key>
+      <PropertyRef Name="iuNo" />
+    </Key>
+    <Property Name="iuNo" Type="int" Nullable="false" />
+    <Property Name="iuBarkodNo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="iuAd" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="iuMiktar" Type="int" Nullable="false" />
+    <Property Name="iuFiyat" Type="float" Nullable="false" />
+    <Property Name="irsaliyeNo" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="market">
+    <Key>
+      <PropertyRef Name="kullaniciAdi" />
+      <PropertyRef Name="sifre" />
+    </Key>
+    <Property Name="kullaniciAdi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="mNo" />
+    </Key>
+    <Property Name="mNo" Type="int" Nullable="false" />
+    <Property Name="ad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soyad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="toplamSatis" Type="float" Nullable="false" />
+    <Property Name="toplamBorc" Type="float" Nullable="false" />
+    <Property Name="toplamOdenen" Type="float" />
+  </EntityType>
+  <EntityType Name="odeme">
+    <Key>
+      <PropertyRef Name="odemeNo" />
+    </Key>
+    <Property Name="odemeNo" Type="int" Nullable="false" />
+    <Property Name="odemeTutari" Type="float" Nullable="false" />
+    <Property Name="odemeTarihi" Type="date" Nullable="false" />
+    <Property Name="mNo" Type="int" />
+  </EntityType>
+  <EntityType Name="pesinSatis">
+    <Key>
+      <PropertyRef Name="psNo" />
+    </Key>
+    <Property Name="psNo" Type="int" Nullable="false" />
+    <Property Name="psTarih" Type="date" Nullable="false" />
+    <Property Name="psTutar" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pesinSatisUrunu">
+    <Key>
+      <PropertyRef Name="psuNo" />
+    </Key>
+    <Property Name="psuNo" Type="int" Nullable="false" />
+    <Property Name="psuBarkodNo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="psuAd" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="psuMiktar" Type="int" Nullable="false" />
+    <Property Name="psuFiyat" Type="float" Nullable="false" />
+    <Property Name="psNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayac">
+    <Key>
+      <PropertyRef Name="sayacNo" />
+    </Key>
+    <Property Name="sayacNo" Type="int" Nullable="false" />
+    <Property Name="urunKodu" Type="int" Nullable="false" />
+    <Property Name="urunSayaci" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tedarikci">
+    <Key>
+      <PropertyRef Name="tNo" />
+    </Key>
+    <Property Name="tNo" Type="int" Nullable="false" />
+    <Property Name="tBorc" Type="float" Nullable="false" />
+    <Property Name="tOdemeBilgileri" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunKodu" />
+    </Key>
+    <Property Name="urunKodu" Type="int" Nullable="false" />
+    <Property Name="barkodNo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="stokMiktari" Type="int" Nullable="false" />
+    <Property Name="satisFiyati" Type="float" Nullable="false" />
+    <Property Name="urunAd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tNo" Type="int" />
+  </EntityType>
+  <Association Name="FK__cariSatis__mNo__36B12243">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="cariSatis" Type="Self.cariSatis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="cariSatis">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cariSatis__mNo__5070F446">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="cariSatis" Type="Self.cariSatis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="cariSatis">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cariSatisU__csNo__625A9A57">
+    <End Role="cariSatis" Type="Self.cariSatis" Multiplicity="1" />
+    <End Role="cariSatisUrunu" Type="Self.cariSatisUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cariSatis">
+        <PropertyRef Name="csNo" />
+      </Principal>
+      <Dependent Role="cariSatisUrunu">
+        <PropertyRef Name="csNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__irsaliye__tNo__31EC6D26">
+    <End Role="tedarikci" Type="Self.tedarikci" Multiplicity="0..1" />
+    <End Role="irsaliye" Type="Self.irsaliye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tedarikci">
+        <PropertyRef Name="tNo" />
+      </Principal>
+      <Dependent Role="irsaliye">
+        <PropertyRef Name="tNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__irsaliye__tNo__52593CB8">
+    <End Role="tedarikci" Type="Self.tedarikci" Multiplicity="0..1" />
+    <End Role="irsaliye" Type="Self.irsaliye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tedarikci">
+        <PropertyRef Name="tNo" />
+      </Principal>
+      <Dependent Role="irsaliye">
+        <PropertyRef Name="tNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__irsaliyeU__irsal__681373AD">
+    <End Role="irsaliye" Type="Self.irsaliye" Multiplicity="1" />
+    <End Role="irsaliyeUrunu" Type="Self.irsaliyeUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="irsaliye">
+        <PropertyRef Name="irsaliyeNo" />
+      </Principal>
+      <Dependent Role="irsaliyeUrunu">
+        <PropertyRef Name="irsaliyeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odeme__mNo__276EDEB3">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="odeme" Type="Self.odeme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="odeme">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odeme__mNo__5441852A">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="odeme" Type="Self.odeme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="odeme">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pesinSatis__psNo__65370702">
+    <End Role="pesinSatis" Type="Self.pesinSatis" Multiplicity="1" />
+    <End Role="pesinSatisUrunu" Type="Self.pesinSatisUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pesinSatis">
+        <PropertyRef Name="psNo" />
+      </Principal>
+      <Dependent Role="pesinSatisUrunu">
+        <PropertyRef Name="psNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sayac__urunKodu__756D6ECB">
+    <End Role="urun" Type="Self.urun" Multiplicity="1" />
+    <End Role="sayac" Type="Self.sayac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunKodu" />
+      </Principal>
+      <Dependent Role="sayac">
+        <PropertyRef Name="urunKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_urun_urun">
+    <End Role="urun" Type="Self.urun" Multiplicity="1" />
+    <End Role="urun1" Type="Self.urun" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunKodu" />
+      </Principal>
+      <Dependent Role="urun1">
+        <PropertyRef Name="urunKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mahalleMarketiModelStoreContainer">
+    <EntitySet Name="cariSatis" EntityType="Self.cariSatis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cariSatisUrunu" EntityType="Self.cariSatisUrunu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="irsaliye" EntityType="Self.irsaliye" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="irsaliyeUrunu" EntityType="Self.irsaliyeUrunu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="odeme" EntityType="Self.odeme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pesinSatisUrunu" EntityType="Self.pesinSatisUrunu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayac" EntityType="Self.sayac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tedarikci" EntityType="Self.tedarikci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="market" EntityType="Self.market" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [market].[kullaniciAdi] AS [kullaniciAdi], 
+    [market].[sifre] AS [sifre]
+    FROM [dbo].[market] AS [market]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__cariSatis__mNo__36B12243" Association="Self.FK__cariSatis__mNo__36B12243">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="cariSatis" EntitySet="cariSatis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cariSatis__mNo__5070F446" Association="Self.FK__cariSatis__mNo__5070F446">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="cariSatis" EntitySet="cariSatis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cariSatisU__csNo__625A9A57" Association="Self.FK__cariSatisU__csNo__625A9A57">
+      <End Role="cariSatis" EntitySet="cariSatis" />
+      <End Role="cariSatisUrunu" EntitySet="cariSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__irsaliye__tNo__31EC6D26" Association="Self.FK__irsaliye__tNo__31EC6D26">
+      <End Role="tedarikci" EntitySet="tedarikci" />
+      <End Role="irsaliye" EntitySet="irsaliye" />
+    </AssociationSet>
+    <AssociationSet Name="FK__irsaliye__tNo__52593CB8" Association="Self.FK__irsaliye__tNo__52593CB8">
+      <End Role="tedarikci" EntitySet="tedarikci" />
+      <End Role="irsaliye" EntitySet="irsaliye" />
+    </AssociationSet>
+    <AssociationSet Name="FK__irsaliyeU__irsal__681373AD" Association="Self.FK__irsaliyeU__irsal__681373AD">
+      <End Role="irsaliye" EntitySet="irsaliye" />
+      <End Role="irsaliyeUrunu" EntitySet="irsaliyeUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odeme__mNo__276EDEB3" Association="Self.FK__odeme__mNo__276EDEB3">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="odeme" EntitySet="odeme" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odeme__mNo__5441852A" Association="Self.FK__odeme__mNo__5441852A">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="odeme" EntitySet="odeme" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pesinSatis__psNo__65370702" Association="Self.FK__pesinSatis__psNo__65370702">
+      <End Role="pesinSatis" EntitySet="pesinSatis" />
+      <End Role="pesinSatisUrunu" EntitySet="pesinSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sayac__urunKodu__756D6ECB" Association="Self.FK__sayac__urunKodu__756D6ECB">
+      <End Role="urun" EntitySet="urun" />
+      <End Role="sayac" EntitySet="sayac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_urun_urun" Association="Self.FK_urun_urun">
+      <End Role="urun" EntitySet="urun" />
+      <End Role="urun1" EntitySet="urun" />
+    </AssociationSet>
+  </EntityContainer>
+>>>>>>> e9a4d3f (kar zarar raporu oluşturuldu ve tamamlandı)
 </Schema>
