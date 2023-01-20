@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EFDBModelStoreContainer" CdmEntityContainer="EFDBEntities">
+    <EntitySetMapping Name="cariSatis">
+      <EntityTypeMapping TypeName="EFDBModel.cariSatis">
+        <MappingFragment StoreEntitySet="cariSatis">
+          <ScalarProperty Name="csNo" ColumnName="csNo" />
+          <ScalarProperty Name="csTarih" ColumnName="csTarih" />
+          <ScalarProperty Name="csTutar" ColumnName="csTutar" />
+          <ScalarProperty Name="ulNo" ColumnName="ulNo" />
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="irsaliye">
+      <EntityTypeMapping TypeName="EFDBModel.irsaliye">
+        <MappingFragment StoreEntitySet="irsaliye">
+          <ScalarProperty Name="irsaliyeNo" ColumnName="irsaliyeNo" />
+          <ScalarProperty Name="irsaliyeTarih" ColumnName="irsaliyeTarih" />
+          <ScalarProperty Name="irsaliyeTutar" ColumnName="irsaliyeTutar" />
+          <ScalarProperty Name="ulNo" ColumnName="ulNo" />
+          <ScalarProperty Name="tNo" ColumnName="tNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="EFDBModel.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="telno" ColumnName="telno" />
+          <ScalarProperty Name="toplamSatis" ColumnName="toplamSatis" />
+          <ScalarProperty Name="toplamBorc" ColumnName="toplamBorc" />
+          <ScalarProperty Name="toplamOdenen" ColumnName="toplamOdenen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odeme">
+      <EntityTypeMapping TypeName="EFDBModel.odeme">
+        <MappingFragment StoreEntitySet="odeme">
+          <ScalarProperty Name="odemeNo" ColumnName="odemeNo" />
+          <ScalarProperty Name="odemeTutari" ColumnName="odemeTutari" />
+          <ScalarProperty Name="odemeTarihi" ColumnName="odemeTarihi" />
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pesinSatis">
+      <EntityTypeMapping TypeName="EFDBModel.pesinSatis">
+        <MappingFragment StoreEntitySet="pesinSatis">
+          <ScalarProperty Name="psNo" ColumnName="psNo" />
+          <ScalarProperty Name="psTarih" ColumnName="psTarih" />
+          <ScalarProperty Name="psTutar" ColumnName="psTutar" />
+          <ScalarProperty Name="ulNo" ColumnName="ulNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tedarikci">
+      <EntityTypeMapping TypeName="EFDBModel.tedarikci">
+        <MappingFragment StoreEntitySet="tedarikci">
+          <ScalarProperty Name="tNo" ColumnName="tNo" />
+          <ScalarProperty Name="tBorc" ColumnName="tBorc" />
+          <ScalarProperty Name="tOdemeBilgileri" ColumnName="tOdemeBilgileri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urun">
+      <EntityTypeMapping TypeName="EFDBModel.urun">
+        <MappingFragment StoreEntitySet="urun">
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="barkodNo" ColumnName="barkodNo" />
+          <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
+          <ScalarProperty Name="satisFiyati" ColumnName="satisFiyati" />
+          <ScalarProperty Name="irsaliyeNo" ColumnName="irsaliyeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunListesi">
+      <EntityTypeMapping TypeName="EFDBModel.urunListesi">
+        <MappingFragment StoreEntitySet="urunListesi">
+          <ScalarProperty Name="ulNo" ColumnName="ulNo" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="birimFiyat" ColumnName="birimFiyat" />
+          <ScalarProperty Name="miktar" ColumnName="miktar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="market">
+      <EntityTypeMapping TypeName="EFDBModel.market">
+        <MappingFragment StoreEntitySet="market">
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

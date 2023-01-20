@@ -1,0 +1,14 @@
+Z:\bizmar\bin\Debug\bizmar.exe.config
+Z:\bizmar\bin\Debug\bizmar.exe
+Z:\bizmar\bin\Debug\bizmar.pdb
+Z:\bizmar\bin\Debug\EntityFramework.dll
+Z:\bizmar\bin\Debug\EntityFramework.SqlServer.dll
+Z:\bizmar\bin\Debug\EntityFramework.xml
+Z:\bizmar\bin\Debug\EntityFramework.SqlServer.xml
+Z:\bizmar\obj\Debug\bizmar.csprojResolveAssemblyReference.cache
+Z:\bizmar\obj\Debug\bizmar.Form1.resources
+Z:\bizmar\obj\Debug\bizmar.Properties.Resources.resources
+Z:\bizmar\obj\Debug\bizmar.csproj.GenerateResource.Cache
+Z:\bizmar\obj\Debug\bizmar.exe
+Z:\bizmar\obj\Debug\bizmar.pdb
+Z:\bizmar\obj\Debug\bizmar.AnaSayfa.resources

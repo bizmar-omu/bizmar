@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mahalleMarketiModelStoreContainer" CdmEntityContainer="mahalleMarketiEntities">
+    <EntitySetMapping Name="cariSatis">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.cariSatis">
+        <MappingFragment StoreEntitySet="cariSatis">
+          <ScalarProperty Name="csNo" ColumnName="csNo" />
+          <ScalarProperty Name="csTarih" ColumnName="csTarih" />
+          <ScalarProperty Name="csTutar" ColumnName="csTutar" />
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cariSatisUrunu">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.cariSatisUrunu">
+        <MappingFragment StoreEntitySet="cariSatisUrunu">
+          <ScalarProperty Name="csuNo" ColumnName="csuNo" />
+          <ScalarProperty Name="csuBarkodNo" ColumnName="csuBarkodNo" />
+          <ScalarProperty Name="csuMiktar" ColumnName="csuMiktar" />
+          <ScalarProperty Name="csuFiyat" ColumnName="csuFiyat" />
+          <ScalarProperty Name="csNo" ColumnName="csNo" />
+          <ScalarProperty Name="csuAd" ColumnName="csuAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="irsaliye">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.irsaliye">
+        <MappingFragment StoreEntitySet="irsaliye">
+          <ScalarProperty Name="irsaliyeNo" ColumnName="irsaliyeNo" />
+          <ScalarProperty Name="irsaliyeTarih" ColumnName="irsaliyeTarih" />
+          <ScalarProperty Name="irsaliyeTutar" ColumnName="irsaliyeTutar" />
+          <ScalarProperty Name="tNo" ColumnName="tNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="irsaliyeUrunu">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.irsaliyeUrunu">
+        <MappingFragment StoreEntitySet="irsaliyeUrunu">
+          <ScalarProperty Name="iuNo" ColumnName="iuNo" />
+          <ScalarProperty Name="iuBarkodNo" ColumnName="iuBarkodNo" />
+          <ScalarProperty Name="iuMiktar" ColumnName="iuMiktar" />
+          <ScalarProperty Name="iuFiyat" ColumnName="iuFiyat" />
+          <ScalarProperty Name="irsaliyeNo" ColumnName="irsaliyeNo" />
+          <ScalarProperty Name="iuAd" ColumnName="iuAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="telno" ColumnName="telno" />
+          <ScalarProperty Name="toplamSatis" ColumnName="toplamSatis" />
+          <ScalarProperty Name="toplamBorc" ColumnName="toplamBorc" />
+          <ScalarProperty Name="toplamOdenen" ColumnName="toplamOdenen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odeme">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.odeme">
+        <MappingFragment StoreEntitySet="odeme">
+          <ScalarProperty Name="odemeNo" ColumnName="odemeNo" />
+          <ScalarProperty Name="odemeTutari" ColumnName="odemeTutari" />
+          <ScalarProperty Name="odemeTarihi" ColumnName="odemeTarihi" />
+          <ScalarProperty Name="mNo" ColumnName="mNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pesinSatis">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.pesinSatis">
+        <MappingFragment StoreEntitySet="pesinSatis">
+          <ScalarProperty Name="psNo" ColumnName="psNo" />
+          <ScalarProperty Name="psTarih" ColumnName="psTarih" />
+          <ScalarProperty Name="psTutar" ColumnName="psTutar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pesinSatisUrunu">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.pesinSatisUrunu">
+        <MappingFragment StoreEntitySet="pesinSatisUrunu">
+          <ScalarProperty Name="psuNo" ColumnName="psuNo" />
+          <ScalarProperty Name="psuBarkodNo" ColumnName="psuBarkodNo" />
+          <ScalarProperty Name="psuMiktar" ColumnName="psuMiktar" />
+          <ScalarProperty Name="psuFiyat" ColumnName="psuFiyat" />
+          <ScalarProperty Name="psNo" ColumnName="psNo" />
+          <ScalarProperty Name="psuAd" ColumnName="psuAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayac">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.sayac">
+        <MappingFragment StoreEntitySet="sayac">
+          <ScalarProperty Name="sayacNo" ColumnName="sayacNo" />
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="urunSayaci" ColumnName="urunSayaci" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tedarikci">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.tedarikci">
+        <MappingFragment StoreEntitySet="tedarikci">
+          <ScalarProperty Name="tNo" ColumnName="tNo" />
+          <ScalarProperty Name="tBorc" ColumnName="tBorc" />
+          <ScalarProperty Name="tOdemeBilgileri" ColumnName="tOdemeBilgileri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urun">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.urun">
+        <MappingFragment StoreEntitySet="urun">
+          <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
+          <ScalarProperty Name="barkodNo" ColumnName="barkodNo" />
+          <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
+          <ScalarProperty Name="satisFiyati" ColumnName="satisFiyati" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="market">
+      <EntityTypeMapping TypeName="mahalleMarketiModel.market">
+        <MappingFragment StoreEntitySet="market">
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
