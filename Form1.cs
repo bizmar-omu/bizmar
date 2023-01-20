@@ -32,8 +32,9 @@ namespace bizmar
 
                 if (kayitVarmi)
                 {
-                    MessageBox.Show(marketSahibi.kullaniciAdi);
-                    MessageBox.Show(marketSahibi.sifre);
+                    AnaSayfa asa = new AnaSayfa();
+                    asa.Show();
+                    this.Hide();
                 } else
                 {
                     MessageBox.Show("Kayıt bulunamadı");
