@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace bizmar
 {
-    public partial class Form1 : Form
+    public partial class ikitarihgrafik : Form
     {
-        public Form1()
+        public ikitarihgrafik()
         {
             InitializeComponent();
         }
