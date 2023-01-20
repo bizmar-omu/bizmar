@@ -31,11 +31,19 @@ namespace Satış
         {
             List<pesinSatisUrunu> temp1 = new List<pesinSatisUrunu>();
 
-           foreach(DataGridViewRow urun in urunler)
+            int sonPsuNo;
+
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            {
+                pesinSatisUrunu sonUrun = db.pesinSatisUrunu.ToList<pesinSatisUrunu>().LastOrDefault<pesinSatisUrunu>();
+                sonPsuNo = sonUrun != null ? sonUrun.psuNo + 1 : 0;
+            }
+
+                foreach (DataGridViewRow urun in urunler)
             {
                 pesinSatisUrunu temp2 = new pesinSatisUrunu();
 
-                temp2.psuNo = Convert.ToInt32(urun.Cells[0].Value);
+                temp2.psuNo = sonPsuNo++;
                 temp2.psuBarkodNo = Convert.ToString(urun.Cells[1].Value);
                 temp2.psuAd = Convert.ToString(urun.Cells[2].Value);
                 temp2.psuMiktar = Convert.ToInt32(urun.Cells[3].Value);
