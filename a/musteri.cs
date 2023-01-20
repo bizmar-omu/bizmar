@@ -7,26 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar
+namespace a
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cariSatis
+    public partial class musteri
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public cariSatis()
+        public musteri()
         {
-            this.cariSatisUrunu = new HashSet<cariSatisUrunu>();
+            this.cariSatis = new HashSet<cariSatis>();
+            this.odeme = new HashSet<odeme>();
         }
     
-        public int csNo { get; set; }
-        public System.DateTime csTarih { get; set; }
-        public double csTutar { get; set; }
-        public Nullable<int> mNo { get; set; }
+        public int mNo { get; set; }
+        public string ad { get; set; }
+        public string soyad { get; set; }
+        public string telno { get; set; }
+        public double toplamSatis { get; set; }
+        public double toplamBorc { get; set; }
+        public Nullable<double> toplamOdenen { get; set; }
     
-        public virtual musteri musteri { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cariSatisUrunu> cariSatisUrunu { get; set; }
+        public virtual ICollection<cariSatis> cariSatis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<odeme> odeme { get; set; }
     }
 }

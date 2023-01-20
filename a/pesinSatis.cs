@@ -7,21 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace bizmar
+namespace a
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class pesinSatisUrunu
+    public partial class pesinSatis
     {
-        public int psuNo { get; set; }
-        public string psuBarkodNo { get; set; }
-        public int psuMiktar { get; set; }
-        public double psuFiyat { get; set; }
         public int psNo { get; set; }
-        public string psuAd { get; set; }
+        public System.DateTime psTarih { get; set; }
+        public double psTutar { get; set; }
+        public Nullable<int> ulNo { get; set; }
     
-        public virtual pesinSatis pesinSatis { get; set; }
+        public virtual urunListesi urunListesi { get; set; }
     }
 }

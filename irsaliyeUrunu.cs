@@ -7,7 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Satış
+
+namespace bizmar
+
 {
     using System;
     using System.Collections.Generic;

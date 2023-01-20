@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar
+namespace a
 {
     using System;
     using System.Data.Entity;
@@ -26,16 +26,13 @@ namespace bizmar
         }
     
         public virtual DbSet<cariSatis> cariSatis { get; set; }
-        public virtual DbSet<cariSatisUrunu> cariSatisUrunu { get; set; }
         public virtual DbSet<irsaliye> irsaliye { get; set; }
-        public virtual DbSet<irsaliyeUrunu> irsaliyeUrunu { get; set; }
         public virtual DbSet<musteri> musteri { get; set; }
         public virtual DbSet<odeme> odeme { get; set; }
         public virtual DbSet<pesinSatis> pesinSatis { get; set; }
-        public virtual DbSet<pesinSatisUrunu> pesinSatisUrunu { get; set; }
-        public virtual DbSet<sayac> sayac { get; set; }
         public virtual DbSet<tedarikci> tedarikci { get; set; }
         public virtual DbSet<urun> urun { get; set; }
+        public virtual DbSet<urunListesi> urunListesi { get; set; }
         public virtual DbSet<market> market { get; set; }
     }
 }
