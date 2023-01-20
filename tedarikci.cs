@@ -18,7 +18,6 @@ namespace Satış
         public tedarikci()
         {
             this.irsaliye = new HashSet<irsaliye>();
-            this.irsaliye1 = new HashSet<irsaliye>();
         }
     
         public int tNo { get; set; }
@@ -27,7 +26,5 @@ namespace Satış
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<irsaliye> irsaliye { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<irsaliye> irsaliye1 { get; set; }
     }
 }

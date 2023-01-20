@@ -15,17 +15,42 @@ namespace Satış
     {
         musteri model = new musteri();
         cariSatis cSatis= new cariSatis();
-        public cari()
+
+        public DataGridViewRowCollection urunler;
+
+        public cari(DataGridViewRowCollection urunler)
         {
             InitializeComponent();
+            this.urunler = urunler;
+        }
+
+        List<cariSatisUrunu> parseDataGridView(int csNo)
+        {
+            List<cariSatisUrunu> temp1 = new List<cariSatisUrunu>();
+
+            foreach (DataGridViewRow urun in urunler)
+            {
+                cariSatisUrunu temp2 = new cariSatisUrunu();
+
+                temp2.csuNo = Convert.ToInt32(urun.Cells[0].Value);
+                temp2.csuBarkodNo = Convert.ToString(urun.Cells[1].Value);
+                temp2.csuAd = Convert.ToString(urun.Cells[2].Value);
+                temp2.csuMiktar = Convert.ToInt32(urun.Cells[3].Value);
+                temp2.csuFiyat = Convert.ToDouble(urun.Cells[4].Value);
+                temp2.csNo = csNo;
+
+                temp1.Add(temp2);
+            }
+
+            return temp1;
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             using (mahalleMarketiEntities db = new mahalleMarketiEntities())
             {
-                cariSatis sonSatis = db.cariSatis.ToList<cariSatis>().Last<cariSatis>();
-                cSatis.csNo = sonSatis.csNo + 1;
+                cariSatis sonSatis = db.cariSatis.ToList<cariSatis>().LastOrDefault<cariSatis>();
+                cSatis.csNo = sonSatis != null ? sonSatis.csNo + 1 : 0;
                 txtcsNo.Text = (cSatis.csNo).ToString();
             }
             LoadData();
@@ -95,9 +120,17 @@ namespace Satış
             cSatis.csTutar = int.Parse(txttoplamm.Text.Trim());
             cSatis.csTarih = dateTimePicker1.Value;
             cSatis.mNo = int.Parse(txtmNo.Text.Trim());
-            cSatis.ulNo = 0;
+
             using (mahalleMarketiEntities db = new mahalleMarketiEntities())
             {
+                List<cariSatisUrunu> urunler = parseDataGridView(cSatis.csNo);
+               
+                foreach(cariSatisUrunu csu in urunler)
+                {
+                    if(csu.csuAd != "")
+                        db.cariSatisUrunu.Add(csu);
+                }
+
                 db.cariSatis.Add(cSatis);
                 db.SaveChanges();
             }
@@ -110,7 +143,7 @@ namespace Satış
 
         private void byenimüsteri_Click(object sender, EventArgs e)
         {
-            müsteriKayıt form5= new müsteriKayıt();
+            musteriKayit form5= new musteriKayit();
             form5.Show();
         }
 

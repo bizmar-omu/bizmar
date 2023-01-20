@@ -1,6 +1,6 @@
 ﻿namespace Satış
 {
-    partial class satis_türü_ekranı
+    partial class satisTuru
     {
         /// <summary>
         /// Required designer variable.

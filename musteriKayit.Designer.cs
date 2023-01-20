@@ -1,6 +1,6 @@
 ﻿namespace Satış
 {
-    partial class müsteriKayıt
+    partial class musteriKayit
     {
         /// <summary>
         /// Required designer variable.

@@ -13,10 +13,10 @@ namespace Satış
 {
     public partial class anaSatisEkrani : Form
     {
-        
-        urunListesi model = new urunListesi();
         urun model2 = new urun();
         mahalleMarketiEntities db = new mahalleMarketiEntities();
+
+        urun[] sepet = { };
 
         void Clear()
         {
@@ -80,8 +80,9 @@ namespace Satış
         private void btamamla_Click(object sender, EventArgs e)
         {
             tutarhesapla();
-            satis_türü_ekranı frm2= new satis_türü_ekranı();
-            frm2.txttoplamtutar.Text= txttoplam.Text; 
+            satisTuru frm2= new satisTuru();
+            frm2.txttoplamtutar.Text= txttoplam.Text;
+            frm2.urunler = dgvsepet.Rows;
             frm2.Show();
 
         }

@@ -18,3 +18,20 @@ D:\Market Proje\Satış\obj\Debug\Satış.satis_türü_ekranı.resources
 D:\Market Proje\Satış\obj\Debug\Satış.pesin.resources
 D:\Market Proje\Satış\obj\Debug\Satış.cari.resources
 D:\Market Proje\Satış\obj\Debug\Satış.müsteriKayıt.resources
+Z:\bizmar\obj\Debug\Satış.csprojResolveAssemblyReference.cache
+Z:\bizmar\obj\Debug\Satış.exe
+Z:\bizmar\obj\Debug\Satış.pdb
+Z:\bizmar\obj\Debug\Satış.anaSatisEkrani.resources
+Z:\bizmar\obj\Debug\Satış.musteriKayit.resources
+Z:\bizmar\obj\Debug\Satış.pesin.resources
+Z:\bizmar\obj\Debug\Satış.cari.resources
+Z:\bizmar\obj\Debug\Satış.Properties.Resources.resources
+Z:\bizmar\obj\Debug\Satış.satisTuru.resources
+Z:\bizmar\obj\Debug\Satış.csproj.GenerateResource.Cache
+Z:\bizmar\bin\Debug\Satış.exe.config
+Z:\bizmar\bin\Debug\Satış.exe
+Z:\bizmar\bin\Debug\Satış.pdb
+Z:\bizmar\bin\Debug\EntityFramework.dll
+Z:\bizmar\bin\Debug\EntityFramework.SqlServer.dll
+Z:\bizmar\bin\Debug\EntityFramework.xml
+Z:\bizmar\bin\Debug\EntityFramework.SqlServer.xml

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Satış
 {
-    public partial class müsteriKayıt : Form
+    public partial class musteriKayit : Form
     {
         musteri model = new musteri();
-        public müsteriKayıt()
+        public musteriKayit()
         {
             InitializeComponent();
         }

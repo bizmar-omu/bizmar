@@ -20,6 +20,5 @@ namespace Satış
         public Nullable<int> mNo { get; set; }
     
         public virtual musteri musteri { get; set; }
-        public virtual musteri musteri1 { get; set; }
     }
 }

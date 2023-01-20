@@ -17,23 +17,16 @@ namespace Satış
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public irsaliye()
         {
-            this.urun = new HashSet<urun>();
-            this.urun1 = new HashSet<urun>();
+            this.irsaliyeUrunu = new HashSet<irsaliyeUrunu>();
         }
     
         public int irsaliyeNo { get; set; }
         public System.DateTime irsaliyeTarih { get; set; }
         public double irsaliyeTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
         public Nullable<int> tNo { get; set; }
     
         public virtual tedarikci tedarikci { get; set; }
-        public virtual tedarikci tedarikci1 { get; set; }
-        public virtual urunListesi urunListesi { get; set; }
-        public virtual urunListesi urunListesi1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urun> urun { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urun> urun1 { get; set; }
+        public virtual ICollection<irsaliyeUrunu> irsaliyeUrunu { get; set; }
     }
 }

@@ -14,25 +14,10 @@ namespace Satış
     
     public partial class urun
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public urun()
-        {
-            this.urunListesi = new HashSet<urunListesi>();
-            this.urunListesi1 = new HashSet<urunListesi>();
-        }
-    
         public int urunKodu { get; set; }
         public string barkodNo { get; set; }
         public int stokMiktari { get; set; }
         public double satisFiyati { get; set; }
-        public int irsaliyeNo { get; set; }
         public string urunAd { get; set; }
-    
-        public virtual irsaliye irsaliye { get; set; }
-        public virtual irsaliye irsaliye1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urunListesi> urunListesi { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urunListesi> urunListesi1 { get; set; }
     }
 }

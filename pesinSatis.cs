@@ -14,12 +14,17 @@ namespace Satış
     
     public partial class pesinSatis
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public pesinSatis()
+        {
+            this.pesinSatisUrunu = new HashSet<pesinSatisUrunu>();
+        }
+    
         public int psNo { get; set; }
         public System.DateTime psTarih { get; set; }
         public double psTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
     
-        public virtual urunListesi urunListesi { get; set; }
-        public virtual urunListesi urunListesi1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<pesinSatisUrunu> pesinSatisUrunu { get; set; }
     }
 }

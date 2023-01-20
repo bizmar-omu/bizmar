@@ -58,40 +58,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaSatisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaSatisEkrani.Designer.cs">
+      <DependentUpon>anaSatisEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="cariSatis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ana_satis_ekrani.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ana_satis_ekrani.Designer.cs">
-      <DependentUpon>ana_satis_ekrani.cs</DependentUpon>
-    </Compile>
-    <Compile Include="satisTürü.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="satisTürü.Designer.cs">
-      <DependentUpon>satisTürü.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pesin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pesin.Designer.cs">
-      <DependentUpon>pesin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="cari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cari.Designer.cs">
-      <DependentUpon>cari.cs</DependentUpon>
-    </Compile>
-    <Compile Include="müsteriKayıt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="müsteriKayıt.Designer.cs">
-      <DependentUpon>müsteriKayıt.cs</DependentUpon>
+    <Compile Include="cariSatisUrunu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="irsaliye.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="irsaliyeUrunu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="market.cs">
@@ -115,40 +97,58 @@
     <Compile Include="musteri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="musteriKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriKayit.Designer.cs">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="odeme.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pesin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pesin.Designer.cs">
+      <DependentUpon>pesin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cari.Designer.cs">
+      <DependentUpon>cari.cs</DependentUpon>
     </Compile>
     <Compile Include="pesinSatis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="pesinSatisUrunu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="satisTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satisTuru.Designer.cs">
+      <DependentUpon>satisTuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="tedarikci.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="urungetir_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="urunListesi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ana_satis_ekrani.resx">
-      <DependentUpon>ana_satis_ekrani.cs</DependentUpon>
+    <EmbeddedResource Include="anaSatisEkrani.resx">
+      <DependentUpon>anaSatisEkrani.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="satisTürü.resx">
-      <DependentUpon>satisTürü.cs</DependentUpon>
+    <EmbeddedResource Include="musteriKayit.resx">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pesin.resx">
       <DependentUpon>pesin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cari.resx">
       <DependentUpon>cari.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="müsteriKayıt.resx">
-      <DependentUpon>müsteriKayıt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +160,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="satisTuru.resx">
+      <DependentUpon>satisTuru.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -182,6 +185,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\istockphoto-1138197225-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -192,10 +201,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\istockphoto-1138197225-170667a.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

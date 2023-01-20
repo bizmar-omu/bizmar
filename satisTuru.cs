@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace Satış
 {
-    public partial class satis_türü_ekranı : Form
+    public partial class satisTuru : Form
     {
-        public satis_türü_ekranı()
+        public satisTuru()
         {
             InitializeComponent();
         }
 
+        public DataGridViewRowCollection urunler;
+
         private void btpesinsatis_Click(object sender, EventArgs e)
         {
-            pesin frm3= new pesin();
+            pesin frm3= new pesin(urunler);
             frm3.txttoplamtutar3.Text = txttoplamtutar.Text;
             frm3.Show();
             this.Close();
@@ -33,7 +35,7 @@ namespace Satış
 
         private void btcarisatis_Click(object sender, EventArgs e)
         {
-            cari frm4 = new cari();
+            cari frm4 = new cari(urunler);
             frm4.txttoplamm.Text = txttoplamtutar.Text;
             frm4.Show();
             this.Close();

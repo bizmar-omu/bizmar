@@ -12,8 +12,6 @@ namespace Satış
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
     public partial class mahalleMarketiEntities : DbContext
     {
@@ -28,18 +26,15 @@ namespace Satış
         }
     
         public virtual DbSet<cariSatis> cariSatis { get; set; }
+        public virtual DbSet<cariSatisUrunu> cariSatisUrunu { get; set; }
         public virtual DbSet<irsaliye> irsaliye { get; set; }
+        public virtual DbSet<irsaliyeUrunu> irsaliyeUrunu { get; set; }
         public virtual DbSet<musteri> musteri { get; set; }
         public virtual DbSet<odeme> odeme { get; set; }
         public virtual DbSet<pesinSatis> pesinSatis { get; set; }
+        public virtual DbSet<pesinSatisUrunu> pesinSatisUrunu { get; set; }
         public virtual DbSet<tedarikci> tedarikci { get; set; }
         public virtual DbSet<urun> urun { get; set; }
-        public virtual DbSet<urunListesi> urunListesi { get; set; }
         public virtual DbSet<market> market { get; set; }
-    
-        public virtual ObjectResult<urungetir_Result> urungetir()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<urungetir_Result>("urungetir");
-        }
     }
 }

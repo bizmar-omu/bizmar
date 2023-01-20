@@ -14,15 +14,19 @@ namespace Satış
     
     public partial class cariSatis
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public cariSatis()
+        {
+            this.cariSatisUrunu = new HashSet<cariSatisUrunu>();
+        }
+    
         public int csNo { get; set; }
         public System.DateTime csTarih { get; set; }
         public double csTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
         public Nullable<int> mNo { get; set; }
     
         public virtual musteri musteri { get; set; }
-        public virtual musteri musteri1 { get; set; }
-        public virtual urunListesi urunListesi { get; set; }
-        public virtual urunListesi urunListesi1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<cariSatisUrunu> cariSatisUrunu { get; set; }
     }
 }

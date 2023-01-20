@@ -18,9 +18,7 @@ namespace Satış
         public musteri()
         {
             this.cariSatis = new HashSet<cariSatis>();
-            this.cariSatis1 = new HashSet<cariSatis>();
             this.odeme = new HashSet<odeme>();
-            this.odeme1 = new HashSet<odeme>();
         }
     
         public int mNo { get; set; }
@@ -34,10 +32,6 @@ namespace Satış
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cariSatis> cariSatis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cariSatis> cariSatis1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<odeme> odeme { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<odeme> odeme1 { get; set; }
     }
 }
