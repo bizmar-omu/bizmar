@@ -82,7 +82,7 @@ namespace bizmar
                         product.satisFiyati = int.Parse(array[4]);
                     } catch
                     {
-                        MessageBox.Show(line);
+                        
                     }
 
                     db.urun.Add(product);
