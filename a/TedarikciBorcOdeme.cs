@@ -122,7 +122,7 @@ namespace a
 
         private void buttonr_Click(object sender, EventArgs e)
         {
-            Form5 frm5 = new Form5();
+            TedarikciBorcRaporEkrani frm5 = new TedarikciBorcRaporEkrani();
             frm5.txtno.Text = txttno.Text;
             frm5.Show();
         }

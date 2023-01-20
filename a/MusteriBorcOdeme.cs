@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,7 +123,7 @@ namespace a
 
         private void brapor_Click(object sender, EventArgs e)
         {
-            Form4 frm4 = new Form4();
+            MusteriBorcRaporEkrani frm4 = new MusteriBorcRaporEkrani();
             frm4.txtno.Text = txtmno.Text;
             frm4.Show();
             
@@ -142,6 +143,27 @@ namespace a
         {
             label5.Text = DateTime.Now.ToLongDateString();
             label4.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application Excel = new Microsoft.Office.Interop.Excel.Application();
+            Workbook wb = Excel.Workbooks.Add(XlSheetType.xlWorksheet);
+            Worksheet ws = (Worksheet)Excel.ActiveSheet;
+            Excel.Visible = true;
+
+            for (int i = 1; i < dataGridView2.Columns.Count + 1; i++)
+            {
+                ws.Cells[1, i] = dataGridView2.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < (dataGridView2.Rows.Count); i++)
+            {
+                for (int j = 0; j < dataGridView2.Columns.Count; j++)
+                {
+                    ws.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
+                }
+            }
         }
     }
 }

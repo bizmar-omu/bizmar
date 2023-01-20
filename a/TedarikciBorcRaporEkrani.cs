@@ -12,10 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace a
 {
-    public partial class Form5 : Form
+    public partial class TedarikciBorcRaporEkrani : Form
     {
         todeme model = new todeme();
-        public Form5()
+        public TedarikciBorcRaporEkrani()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace a
 {
-    partial class Form5
+    partial class TedarikciBorcRaporEkrani
     {
         /// <summary>
         /// Required designer variable.

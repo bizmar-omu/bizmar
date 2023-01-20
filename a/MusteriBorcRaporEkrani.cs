@@ -13,12 +13,12 @@ using Microsoft.Office.Interop.Excel;
 
 namespace a
 {
-    public partial class Form4 : Form
+    public partial class MusteriBorcRaporEkrani : Form
     {
         odeme model = new odeme();
         musteri model2 = new musteri();
 
-        public Form4()
+        public MusteriBorcRaporEkrani()
         {
             InitializeComponent();
         }

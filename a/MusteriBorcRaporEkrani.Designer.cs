@@ -1,6 +1,6 @@
 ﻿namespace a
 {
-    partial class Form4
+    partial class MusteriBorcRaporEkrani
     {
         /// <summary>
         /// Required designer variable.
@@ -141,7 +141,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form4
+            // MusteriBorcRaporEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,8 +152,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtno);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
-            this.Text = "Borç Rapor Ekranı";
+            this.Name = "MusteriBorcRaporEkrani";
+            this.Text = "Müşteri Borç Rapor Ekranı";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
