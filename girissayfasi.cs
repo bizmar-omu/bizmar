@@ -11,10 +11,10 @@ using bizmar.models;
 
 namespace bizmar
 {
-    public partial class Form1 : Form
+    public partial class girissayfasi : Form
     {
         market marketSahibi;
-        public Form1()
+        public girissayfasi()
         {
             InitializeComponent();
         }
