@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="mahalleMarketiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="mahalleMarketiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="cariSatis">
           <Key>
             <PropertyRef Name="csNo" />
@@ -65,6 +65,16 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <Property Name="psTutar" Type="float" Nullable="false" />
           <Property Name="ulNo" Type="int" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="tedarikci">
           <Key>
             <PropertyRef Name="tNo" />
@@ -72,6 +82,15 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <Property Name="tNo" Type="int" Nullable="false" />
           <Property Name="tBorc" Type="float" Nullable="false" />
           <Property Name="tOdemeBilgileri" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="todeme">
+          <Key>
+            <PropertyRef Name="todemeNo" />
+          </Key>
+          <Property Name="todemeNo" Type="int" Nullable="false" />
+          <Property Name="odenenTutar" Type="int" Nullable="false" />
+          <Property Name="odenenTarih" Type="date" Nullable="false" />
+          <Property Name="tNo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="urun">
           <Key>
@@ -82,6 +101,7 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <Property Name="stokMiktari" Type="int" Nullable="false" />
           <Property Name="satisFiyati" Type="float" Nullable="false" />
           <Property Name="irsaliyeNo" Type="int" Nullable="false" />
+          <Property Name="urunAd" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="urunListesi">
           <Key>
@@ -188,13 +208,27 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_todeme_tedarikci">
+          <End Role="tedarikci" Type="Self.tedarikci" Multiplicity="1" />
+          <End Role="todeme" Type="Self.todeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tedarikci">
+              <PropertyRef Name="tNo" />
+            </Principal>
+            <Dependent Role="todeme">
+              <PropertyRef Name="tNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="mahalleMarketiModelStoreContainer">
           <EntitySet Name="cariSatis" EntityType="Self.cariSatis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="irsaliye" EntityType="Self.irsaliye" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="odeme" EntityType="Self.odeme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tedarikci" EntityType="Self.tedarikci" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="todeme" EntityType="Self.todeme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="urunListesi" EntityType="Self.urunListesi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="market" EntityType="Self.market" store:Type="Tables" store:Schema="dbo">
@@ -235,9 +269,12 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
             <End Role="urun" EntitySet="urun" />
             <End Role="urunListesi" EntitySet="urunListesi" />
           </AssociationSet>
+          <AssociationSet Name="FK_todeme_tedarikci" Association="Self.FK_todeme_tedarikci">
+            <End Role="tedarikci" EntitySet="tedarikci" />
+            <End Role="todeme" EntitySet="todeme" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="mahalleMarketiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -308,6 +345,7 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <Property Name="tBorc" Type="Double" Nullable="false" />
           <Property Name="tOdemeBilgileri" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="irsaliye" Relationship="Self.FK__irsaliye__tNo__31EC6D26" FromRole="tedarikci" ToRole="irsaliye" />
+          <NavigationProperty Name="todeme" Relationship="mahalleMarketiModel.FK_todeme_tedarikci" FromRole="tedarikci" ToRole="todeme" />
         </EntityType>
         <EntityType Name="urun">
           <Key>
@@ -320,6 +358,7 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <Property Name="irsaliyeNo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="irsaliye" Relationship="Self.FK__urun__irsaliyeNo__32E0915F" FromRole="urun" ToRole="irsaliye" />
           <NavigationProperty Name="urunListesi" Relationship="Self.FK__urunListe__urunK__2E1BDC42" FromRole="urun" ToRole="urunListesi" />
+          <Property Name="urunAd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="urunListesi">
           <Key>
@@ -480,7 +519,45 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
             <End Role="urun" EntitySet="urun" />
             <End Role="urunListesi" EntitySet="urunListesi" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="mahalleMarketiModel.sysdiagrams" />
+          <EntitySet Name="todeme" EntityType="mahalleMarketiModel.todeme" />
+          <AssociationSet Name="FK_todeme_tedarikci" Association="mahalleMarketiModel.FK_todeme_tedarikci">
+            <End Role="tedarikci" EntitySet="tedarikci" />
+            <End Role="todeme" EntitySet="todeme" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="principal_id" Nullable="false" Type="Int32" />
+          <Property Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" MaxLength="Max" FixedLength="false" Type="Binary" />
+        </EntityType>
+        <EntityType Name="todeme">
+          <Key>
+            <PropertyRef Name="todemeNo" />
+          </Key>
+          <Property Name="todemeNo" Type="Int32" Nullable="false" />
+          <Property Name="odenenTutar" Type="Int32" Nullable="false" />
+          <Property Name="odenenTarih" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="tNo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tedarikci" Relationship="mahalleMarketiModel.FK_todeme_tedarikci" FromRole="todeme" ToRole="tedarikci" />
+        </EntityType>
+        <Association Name="FK_todeme_tedarikci">
+          <End Type="mahalleMarketiModel.tedarikci" Role="tedarikci" Multiplicity="1" />
+          <End Type="mahalleMarketiModel.todeme" Role="todeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tedarikci">
+              <PropertyRef Name="tNo" />
+            </Principal>
+            <Dependent Role="todeme">
+              <PropertyRef Name="tNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -554,6 +631,7 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
           <EntitySetMapping Name="urun">
             <EntityTypeMapping TypeName="mahalleMarketiModel.urun">
               <MappingFragment StoreEntitySet="urun">
+                <ScalarProperty Name="urunAd" ColumnName="urunAd" />
                 <ScalarProperty Name="urunKodu" ColumnName="urunKodu" />
                 <ScalarProperty Name="barkodNo" ColumnName="barkodNo" />
                 <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
@@ -577,6 +655,27 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
               <MappingFragment StoreEntitySet="market">
                 <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
                 <ScalarProperty Name="sifre" ColumnName="sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="mahalleMarketiModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="todeme">
+            <EntityTypeMapping TypeName="mahalleMarketiModel.todeme">
+              <MappingFragment StoreEntitySet="todeme">
+                <ScalarProperty Name="tNo" ColumnName="tNo" />
+                <ScalarProperty Name="odenenTarih" ColumnName="odenenTarih" />
+                <ScalarProperty Name="odenenTutar" ColumnName="odenenTutar" />
+                <ScalarProperty Name="todemeNo" ColumnName="todemeNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

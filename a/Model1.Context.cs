@@ -34,5 +34,7 @@ namespace a
         public virtual DbSet<urun> urun { get; set; }
         public virtual DbSet<urunListesi> urunListesi { get; set; }
         public virtual DbSet<market> market { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<todeme> todeme { get; set; }
     }
 }
