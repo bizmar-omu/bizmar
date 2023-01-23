@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUrunListesi = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.urunKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunSayaci = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunListesi)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvUrunListesi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(630, 271);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvUrunListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUrunListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrunListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.urunKodu,
+            this.urunAd,
+            this.urunSayaci});
+            this.dgvUrunListesi.Location = new System.Drawing.Point(56, 101);
+            this.dgvUrunListesi.Name = "dgvUrunListesi";
+            this.dgvUrunListesi.Size = new System.Drawing.Size(630, 271);
+            this.dgvUrunListesi.TabIndex = 0;
+            this.dgvUrunListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunListesi_CellContentClick);
             // 
             // label1
             // 
@@ -52,17 +61,35 @@
             this.label1.Text = "Çok Satılandan Az Satılana Ürün Listesi";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // urunKodu
+            // 
+            this.urunKodu.DataPropertyName = "urunKodu";
+            this.urunKodu.HeaderText = "Ürün Kodu";
+            this.urunKodu.Name = "urunKodu";
+            // 
+            // urunAd
+            // 
+            this.urunAd.DataPropertyName = "urunAd";
+            this.urunAd.HeaderText = "Ürün Adı";
+            this.urunAd.Name = "urunAd";
+            // 
+            // urunSayaci
+            // 
+            this.urunSayaci.DataPropertyName = "urunSayaci";
+            this.urunSayaci.HeaderText = "Ürün Sayacı";
+            this.urunSayaci.Name = "urunSayaci";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 394);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUrunListesi);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunListesi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,8 +97,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUrunListesi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunKodu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunAd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunSayaci;
     }
 }
 
