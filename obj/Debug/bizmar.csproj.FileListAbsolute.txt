@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Z:\bizmar\bin\Debug\bizmar.exe.config
 Z:\bizmar\bin\Debug\bizmar.exe
 Z:\bizmar\bin\Debug\bizmar.pdb
@@ -22,9 +23,24 @@ C:\Users\Terea\source\repos\a\obj\Debug\bizmar.ikitarihgrafik.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.musteriKayit.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.pesin.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.satisTuru.resources
+=======
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.AssemblyReference.cache
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.SuggestedBindingRedirects.cache
+>>>>>>> 547280d (update)
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.urunekleme.resources
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.Properties.Resources.resources
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.GenerateResource.cache
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+=======
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.exe.config
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.exe
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.pdb
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.dll
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.xml
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.CopyComplete
+>>>>>>> 547280d (update)
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.exe
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.pdb

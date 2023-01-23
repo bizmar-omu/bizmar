@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
@@ -36,4 +37,39 @@
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1c947c1e96449d0bb5187514578beac" Name="Diagram1">
+        <EntityTypeShape EntityType="mahalleMarketiModel.cariSatis" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.cariSatisUrunu" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.irsaliye" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.irsaliyeUrunu" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.musteri" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.odeme" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.pesinSatis" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.pesinSatisUrunu" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.sayac" Width="1.5" PointX="8" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.tedarikci" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.urun" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mahalleMarketiModel.market" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__mNo__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatis__mNo__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__cariSatisU__csNo__625A9A57" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__tNo__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliye__tNo__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__irsaliyeU__irsal__681373AD" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__odeme__mNo__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__odeme__mNo__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__pesinSatis__psNo__65370702" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK__sayac__urunKodu__756D6ECB" ManuallyRouted="false" />
+        <AssociationConnector Association="mahalleMarketiModel.FK_urun_urun" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+>>>>>>> e9a4d3f (kar zarar raporu oluşturuldu ve tamamlandı)
 </edmx:Edmx>

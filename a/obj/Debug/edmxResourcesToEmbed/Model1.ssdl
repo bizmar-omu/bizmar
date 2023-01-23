@@ -60,16 +60,6 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <Property Name="psTutar" Type="float" Nullable="false" />
     <Property Name="ulNo" Type="int" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="tedarikci">
     <Key>
       <PropertyRef Name="tNo" />
@@ -77,15 +67,6 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <Property Name="tNo" Type="int" Nullable="false" />
     <Property Name="tBorc" Type="float" Nullable="false" />
     <Property Name="tOdemeBilgileri" Type="varchar" MaxLength="100" Nullable="false" />
-  </EntityType>
-  <EntityType Name="todeme">
-    <Key>
-      <PropertyRef Name="todemeNo" />
-    </Key>
-    <Property Name="todemeNo" Type="int" Nullable="false" />
-    <Property Name="odenenTutar" Type="int" Nullable="false" />
-    <Property Name="odenenTarih" Type="date" Nullable="false" />
-    <Property Name="tNo" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="urun">
     <Key>
@@ -96,7 +77,6 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <Property Name="stokMiktari" Type="int" Nullable="false" />
     <Property Name="satisFiyati" Type="float" Nullable="false" />
     <Property Name="irsaliyeNo" Type="int" Nullable="false" />
-    <Property Name="urunAd" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="urunListesi">
     <Key>
@@ -203,27 +183,13 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_todeme_tedarikci">
-    <End Role="tedarikci" Type="Self.tedarikci" Multiplicity="1" />
-    <End Role="todeme" Type="Self.todeme" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tedarikci">
-        <PropertyRef Name="tNo" />
-      </Principal>
-      <Dependent Role="todeme">
-        <PropertyRef Name="tNo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="mahalleMarketiModelStoreContainer">
     <EntitySet Name="cariSatis" EntityType="Self.cariSatis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="irsaliye" EntityType="Self.irsaliye" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="odeme" EntityType="Self.odeme" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tedarikci" EntityType="Self.tedarikci" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="todeme" EntityType="Self.todeme" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="urunListesi" EntityType="Self.urunListesi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="market" EntityType="Self.market" store:Type="Tables" store:Schema="dbo">
@@ -263,10 +229,6 @@ warning 6002: The table/view 'mahalleMarketi.dbo.market' does not have a primary
     <AssociationSet Name="FK__urunListe__urunK__2E1BDC42" Association="Self.FK__urunListe__urunK__2E1BDC42">
       <End Role="urun" EntitySet="urun" />
       <End Role="urunListesi" EntitySet="urunListesi" />
-    </AssociationSet>
-    <AssociationSet Name="FK_todeme_tedarikci" Association="Self.FK_todeme_tedarikci">
-      <End Role="tedarikci" EntitySet="tedarikci" />
-      <End Role="todeme" EntitySet="todeme" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
