@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mahalleMarketiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cariSatis">
+    <Key>
+      <PropertyRef Name="csNo" />
+    </Key>
+    <Property Name="csNo" Type="Int32" Nullable="false" />
+    <Property Name="csTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="csTutar" Type="Double" Nullable="false" />
+    <Property Name="mNo" Type="Int32" />
+    <NavigationProperty Name="musteri" Relationship="Self.FK__cariSatis__mNo__49C3F6B7" FromRole="cariSatis" ToRole="musteri" />
+    <NavigationProperty Name="cariSatisUrunu" Relationship="Self.FK__cariSatisU__csNo__5CD6CB2B" FromRole="cariSatis" ToRole="cariSatisUrunu" />
+  </EntityType>
+  <EntityType Name="cariSatisUrunu">
+    <Key>
+      <PropertyRef Name="csuNo" />
+    </Key>
+    <Property Name="csuNo" Type="Int32" Nullable="false" />
+    <Property Name="csuBarkodNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="csuMiktar" Type="Int32" Nullable="false" />
+    <Property Name="csuFiyat" Type="Double" Nullable="false" />
+    <Property Name="csNo" Type="Int32" Nullable="false" />
+    <Property Name="csuAd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cariSatis" Relationship="Self.FK__cariSatisU__csNo__5CD6CB2B" FromRole="cariSatisUrunu" ToRole="cariSatis" />
+  </EntityType>
+  <EntityType Name="irsaliye">
+    <Key>
+      <PropertyRef Name="irsaliyeNo" />
+    </Key>
+    <Property Name="irsaliyeNo" Type="Int32" Nullable="false" />
+    <Property Name="irsaliyeTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="irsaliyeTutar" Type="Double" Nullable="false" />
+    <Property Name="tNo" Type="Int32" />
+    <NavigationProperty Name="tedarikci" Relationship="Self.FK__irsaliye__tNo__44FF419A" FromRole="irsaliye" ToRole="tedarikci" />
+    <NavigationProperty Name="irsaliyeUrunu" Relationship="Self.FK__irsaliyeU__irsal__628FA481" FromRole="irsaliye" ToRole="irsaliyeUrunu" />
+  </EntityType>
+  <EntityType Name="irsaliyeUrunu">
+    <Key>
+      <PropertyRef Name="iuNo" />
+    </Key>
+    <Property Name="iuNo" Type="Int32" Nullable="false" />
+    <Property Name="iuBarkodNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iuMiktar" Type="Int32" Nullable="false" />
+    <Property Name="iuFiyat" Type="Double" Nullable="false" />
+    <Property Name="irsaliyeNo" Type="Int32" Nullable="false" />
+    <Property Name="iuAd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="irsaliye" Relationship="Self.FK__irsaliyeU__irsal__628FA481" FromRole="irsaliyeUrunu" ToRole="irsaliye" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="mNo" />
+    </Key>
+    <Property Name="mNo" Type="Int32" Nullable="false" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="toplamSatis" Type="Double" Nullable="false" />
+    <Property Name="toplamBorc" Type="Double" Nullable="false" />
+    <Property Name="toplamOdenen" Type="Double" />
+    <NavigationProperty Name="cariSatis" Relationship="Self.FK__cariSatis__mNo__49C3F6B7" FromRole="musteri" ToRole="cariSatis" />
+    <NavigationProperty Name="odeme" Relationship="Self.FK__odeme__mNo__3A81B327" FromRole="musteri" ToRole="odeme" />
+  </EntityType>
+  <EntityType Name="odeme">
+    <Key>
+      <PropertyRef Name="odemeNo" />
+    </Key>
+    <Property Name="odemeNo" Type="Int32" Nullable="false" />
+    <Property Name="odemeTutari" Type="Double" Nullable="false" />
+    <Property Name="odemeTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="mNo" Type="Int32" />
+    <NavigationProperty Name="musteri" Relationship="Self.FK__odeme__mNo__3A81B327" FromRole="odeme" ToRole="musteri" />
+  </EntityType>
+  <EntityType Name="pesinSatis">
+    <Key>
+      <PropertyRef Name="psNo" />
+    </Key>
+    <Property Name="psNo" Type="Int32" Nullable="false" />
+    <Property Name="psTarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="psTutar" Type="Double" Nullable="false" />
+    <NavigationProperty Name="pesinSatisUrunu" Relationship="Self.FK__pesinSatis__psNo__5FB337D6" FromRole="pesinSatis" ToRole="pesinSatisUrunu" />
+  </EntityType>
+  <EntityType Name="pesinSatisUrunu">
+    <Key>
+      <PropertyRef Name="psuNo" />
+    </Key>
+    <Property Name="psuNo" Type="Int32" Nullable="false" />
+    <Property Name="psuBarkodNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="psuMiktar" Type="Int32" Nullable="false" />
+    <Property Name="psuFiyat" Type="Double" Nullable="false" />
+    <Property Name="psNo" Type="Int32" Nullable="false" />
+    <Property Name="psuAd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pesinSatis" Relationship="Self.FK__pesinSatis__psNo__5FB337D6" FromRole="pesinSatisUrunu" ToRole="pesinSatis" />
+  </EntityType>
+  <EntityType Name="sayac">
+    <Key>
+      <PropertyRef Name="sayacNo" />
+    </Key>
+    <Property Name="sayacNo" Type="Int32" Nullable="false" />
+    <Property Name="urunKodu" Type="Int32" Nullable="false" />
+    <Property Name="urunSayaci" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="urun" Relationship="Self.FK__sayac__urunKodu__6FE99F9F" FromRole="sayac" ToRole="urun" />
+  </EntityType>
+  <EntityType Name="tedarikci">
+    <Key>
+      <PropertyRef Name="tNo" />
+    </Key>
+    <Property Name="tNo" Type="Int32" Nullable="false" />
+    <Property Name="tBorc" Type="Double" Nullable="false" />
+    <Property Name="tOdemeBilgileri" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="irsaliye" Relationship="Self.FK__irsaliye__tNo__44FF419A" FromRole="tedarikci" ToRole="irsaliye" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunKodu" />
+    </Key>
+    <Property Name="urunKodu" Type="Int32" Nullable="false" />
+    <Property Name="barkodNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stokMiktari" Type="Int32" Nullable="false" />
+    <Property Name="satisFiyati" Type="Double" Nullable="false" />
+    <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="sayac" Relationship="Self.FK__sayac__urunKodu__6FE99F9F" FromRole="urun" ToRole="sayac" />
+  </EntityType>
+  <EntityType Name="market">
+    <Key>
+      <PropertyRef Name="kullaniciAdi" />
+      <PropertyRef Name="sifre" />
+    </Key>
+    <Property Name="kullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__cariSatis__mNo__49C3F6B7">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="cariSatis" Type="Self.cariSatis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="cariSatis">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cariSatisU__csNo__5CD6CB2B">
+    <End Role="cariSatis" Type="Self.cariSatis" Multiplicity="1" />
+    <End Role="cariSatisUrunu" Type="Self.cariSatisUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cariSatis">
+        <PropertyRef Name="csNo" />
+      </Principal>
+      <Dependent Role="cariSatisUrunu">
+        <PropertyRef Name="csNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__irsaliye__tNo__44FF419A">
+    <End Role="tedarikci" Type="Self.tedarikci" Multiplicity="0..1" />
+    <End Role="irsaliye" Type="Self.irsaliye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tedarikci">
+        <PropertyRef Name="tNo" />
+      </Principal>
+      <Dependent Role="irsaliye">
+        <PropertyRef Name="tNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__irsaliyeU__irsal__628FA481">
+    <End Role="irsaliye" Type="Self.irsaliye" Multiplicity="1" />
+    <End Role="irsaliyeUrunu" Type="Self.irsaliyeUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="irsaliye">
+        <PropertyRef Name="irsaliyeNo" />
+      </Principal>
+      <Dependent Role="irsaliyeUrunu">
+        <PropertyRef Name="irsaliyeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odeme__mNo__3A81B327">
+    <End Role="musteri" Type="Self.musteri" Multiplicity="0..1" />
+    <End Role="odeme" Type="Self.odeme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteri">
+        <PropertyRef Name="mNo" />
+      </Principal>
+      <Dependent Role="odeme">
+        <PropertyRef Name="mNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pesinSatis__psNo__5FB337D6">
+    <End Role="pesinSatis" Type="Self.pesinSatis" Multiplicity="1" />
+    <End Role="pesinSatisUrunu" Type="Self.pesinSatisUrunu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pesinSatis">
+        <PropertyRef Name="psNo" />
+      </Principal>
+      <Dependent Role="pesinSatisUrunu">
+        <PropertyRef Name="psNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sayac__urunKodu__6FE99F9F">
+    <End Role="urun" Type="Self.urun" Multiplicity="1" />
+    <End Role="sayac" Type="Self.sayac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunKodu" />
+      </Principal>
+      <Dependent Role="sayac">
+        <PropertyRef Name="urunKodu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mahalleMarketiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cariSatis" EntityType="Self.cariSatis" />
+    <EntitySet Name="cariSatisUrunu" EntityType="Self.cariSatisUrunu" />
+    <EntitySet Name="irsaliye" EntityType="Self.irsaliye" />
+    <EntitySet Name="irsaliyeUrunu" EntityType="Self.irsaliyeUrunu" />
+    <EntitySet Name="musteri" EntityType="Self.musteri" />
+    <EntitySet Name="odeme" EntityType="Self.odeme" />
+    <EntitySet Name="pesinSatis" EntityType="Self.pesinSatis" />
+    <EntitySet Name="pesinSatisUrunu" EntityType="Self.pesinSatisUrunu" />
+    <EntitySet Name="sayac" EntityType="Self.sayac" />
+    <EntitySet Name="tedarikci" EntityType="Self.tedarikci" />
+    <EntitySet Name="urun" EntityType="Self.urun" />
+    <EntitySet Name="market" EntityType="Self.market" />
+    <AssociationSet Name="FK__cariSatis__mNo__49C3F6B7" Association="Self.FK__cariSatis__mNo__49C3F6B7">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="cariSatis" EntitySet="cariSatis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cariSatisU__csNo__5CD6CB2B" Association="Self.FK__cariSatisU__csNo__5CD6CB2B">
+      <End Role="cariSatis" EntitySet="cariSatis" />
+      <End Role="cariSatisUrunu" EntitySet="cariSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__irsaliye__tNo__44FF419A" Association="Self.FK__irsaliye__tNo__44FF419A">
+      <End Role="tedarikci" EntitySet="tedarikci" />
+      <End Role="irsaliye" EntitySet="irsaliye" />
+    </AssociationSet>
+    <AssociationSet Name="FK__irsaliyeU__irsal__628FA481" Association="Self.FK__irsaliyeU__irsal__628FA481">
+      <End Role="irsaliye" EntitySet="irsaliye" />
+      <End Role="irsaliyeUrunu" EntitySet="irsaliyeUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odeme__mNo__3A81B327" Association="Self.FK__odeme__mNo__3A81B327">
+      <End Role="musteri" EntitySet="musteri" />
+      <End Role="odeme" EntitySet="odeme" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pesinSatis__psNo__5FB337D6" Association="Self.FK__pesinSatis__psNo__5FB337D6">
+      <End Role="pesinSatis" EntitySet="pesinSatis" />
+      <End Role="pesinSatisUrunu" EntitySet="pesinSatisUrunu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sayac__urunKodu__6FE99F9F" Association="Self.FK__sayac__urunKodu__6FE99F9F">
+      <End Role="urun" EntitySet="urun" />
+      <End Role="sayac" EntitySet="sayac" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
