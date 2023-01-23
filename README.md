@@ -1,0 +1,6 @@
+# bizmar
+
+
+
+
+BAŞARDIK
