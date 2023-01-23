@@ -7,32 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar.models
+namespace bizmar
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class urunListesi
+    public partial class irsaliye
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public urunListesi()
+        public irsaliye()
         {
-            this.cariSatis = new HashSet<cariSatis>();
-            this.irsaliye = new HashSet<irsaliye>();
-            this.pesinSatis = new HashSet<pesinSatis>();
+            this.irsaliyeUrunu = new HashSet<irsaliyeUrunu>();
+            this.urun = new HashSet<urun>();
         }
     
-        public int ulNo { get; set; }
-        public Nullable<int> urunKodu { get; set; }
-        public double birimFiyat { get; set; }
-        public int miktar { get; set; }
+        public int irsaliyeNo { get; set; }
+        public System.DateTime irsaliyeTarih { get; set; }
+        public double irsaliyeTutar { get; set; }
+        public Nullable<int> ulNo { get; set; }
+        public Nullable<int> tNo { get; set; }
     
+        public virtual tedarikci tedarikci { get; set; }
+        public virtual urunListesi urunListesi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cariSatis> cariSatis { get; set; }
+        public virtual ICollection<irsaliyeUrunu> irsaliyeUrunu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<irsaliye> irsaliye { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<pesinSatis> pesinSatis { get; set; }
-        public virtual urun urun { get; set; }
+        public virtual ICollection<urun> urun { get; set; }
     }
 }

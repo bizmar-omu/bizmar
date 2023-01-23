@@ -7,20 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar.models
+namespace bizmar
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cariSatis
+    public partial class odeme
     {
-        public int csNo { get; set; }
-        public System.DateTime csTarih { get; set; }
-        public double csTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
+        public int odemeNo { get; set; }
+        public double odemeTutari { get; set; }
+        public System.DateTime odemeTarihi { get; set; }
         public Nullable<int> mNo { get; set; }
     
         public virtual musteri musteri { get; set; }
-        public virtual urunListesi urunListesi { get; set; }
     }
 }

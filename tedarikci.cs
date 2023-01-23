@@ -7,26 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar.models
+namespace bizmar
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class urun
+    public partial class tedarikci
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public urun()
+        public tedarikci()
         {
-            this.urunListesi = new HashSet<urunListesi>();
+            this.irsaliye = new HashSet<irsaliye>();
+            this.todeme = new HashSet<todeme>();
         }
     
-        public int urunKodu { get; set; }
-        public string barkodNo { get; set; }
-        public int stokMiktari { get; set; }
-        public double satisFiyati { get; set; }
-        public string urunAd { get; set; }
+        public int tNo { get; set; }
+        public double tBorc { get; set; }
+        public string tOdemeBilgileri { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urunListesi> urunListesi { get; set; }
+        public virtual ICollection<irsaliye> irsaliye { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<todeme> todeme { get; set; }
     }
 }

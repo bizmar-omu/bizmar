@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar.models
+namespace bizmar
 {
     using System;
     using System.Collections.Generic;

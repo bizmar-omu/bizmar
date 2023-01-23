@@ -7,22 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using bizmar.models;
 using System.IO;
 
 namespace bizmar
 {
-    public partial class Form1 : Form
+    public partial class urunekleme : Form
     {
 
-        public Form1()
+        public urunekleme()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (EFDBEntities db = new EFDBEntities())
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
             {
                 dataGridViewİrsaliye.AutoGenerateColumns = false;
                 dataGridViewİrsaliye.DataSource = db.urun.ToList<urun>();
@@ -61,7 +60,7 @@ namespace bizmar
         //stoğa ekle işlemi
         private void button1_Click(object sender, EventArgs e)
         {
-            using (EFDBEntities db = new EFDBEntities())
+            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
             {
 
                 string[] lines = richTextBox1.Text.Split('\n');

@@ -1,7 +1,7 @@
 ﻿
 namespace bizmar
 {
-    partial class Form1
+    partial class urunekleme
     {
         /// <summary>
         /// Required designer variable.

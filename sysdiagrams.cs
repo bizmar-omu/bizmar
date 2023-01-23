@@ -7,20 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bizmar.models
+namespace bizmar
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class irsaliye
+    public partial class sysdiagrams
     {
-        public int irsaliyeNo { get; set; }
-        public System.DateTime irsaliyeTarih { get; set; }
-        public double irsaliyeTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
-        public Nullable<int> tNo { get; set; }
-    
-        public virtual tedarikci tedarikci { get; set; }
-        public virtual urunListesi urunListesi { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
