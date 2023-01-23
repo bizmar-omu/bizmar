@@ -1,15 +1,15 @@
+﻿using bizmar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace bizmar
+namespace WindowsFormsApp1
 {
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Uygulamanın ana girdi noktası.
         /// </summary>
         [STAThread]
         static void Main()
@@ -17,7 +17,7 @@ namespace bizmar
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new urunekleme());
+            Application.Run(new coktanazaurunlistesi());
         }
     }
 }
-

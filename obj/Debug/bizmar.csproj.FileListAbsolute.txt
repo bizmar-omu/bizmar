@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Z:\bizmar\bin\Debug\bizmar.exe.config
 Z:\bizmar\bin\Debug\bizmar.exe
 Z:\bizmar\bin\Debug\bizmar.pdb
@@ -22,9 +23,27 @@ C:\Users\Terea\source\repos\a\obj\Debug\bizmar.ikitarihgrafik.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.musteriKayit.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.pesin.resources
 C:\Users\Terea\source\repos\a\obj\Debug\Satış.satisTuru.resources
+=======
+>>>>>>> 547280d (update)
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.urunekleme.resources
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.Properties.Resources.resources
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.GenerateResource.cache
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.CoreCompileInputs.cache
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.exe.config
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.exe
+C:\Users\Terea\source\repos\a\bin\Debug\bizmar.pdb
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.dll
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.xml
+C:\Users\Terea\source\repos\a\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.CopyComplete
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.exe
 C:\Users\Terea\source\repos\a\obj\Debug\bizmar.pdb
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.csproj.ResolveComReference.cache
+C:\Users\Terea\source\repos\a\obj\Debug\a.Form1.resources
+C:\Users\Terea\source\repos\a\obj\Debug\WindowsFormsApp1.coktanazaurunlistesi.resources
+C:\Users\Terea\source\repos\a\obj\Debug\kar_zarar_rapor.Form1.resources
+C:\Users\Terea\source\repos\a\obj\Debug\a.MusteriBorcOdeme.resources
+C:\Users\Terea\source\repos\a\obj\Debug\a.MusteriBorcRaporEkrani.resources
+C:\Users\Terea\source\repos\a\obj\Debug\a.Form2.resources
+C:\Users\Terea\source\repos\a\obj\Debug\a.TedarikciBorcRaporEkrani.resources

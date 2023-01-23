@@ -1,0 +1,16 @@
+D:\Market Proje\kar_zarar_rapor\bin\Debug\kar_zarar_rapor.exe.config
+D:\Market Proje\kar_zarar_rapor\bin\Debug\kar_zarar_rapor.exe
+D:\Market Proje\kar_zarar_rapor\bin\Debug\kar_zarar_rapor.pdb
+D:\Market Proje\kar_zarar_rapor\bin\Debug\EntityFramework.dll
+D:\Market Proje\kar_zarar_rapor\bin\Debug\EntityFramework.SqlServer.dll
+D:\Market Proje\kar_zarar_rapor\bin\Debug\EntityFramework.xml
+D:\Market Proje\kar_zarar_rapor\bin\Debug\EntityFramework.SqlServer.xml
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.csproj.AssemblyReference.cache
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.csproj.SuggestedBindingRedirects.cache
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.Form1.resources
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.Properties.Resources.resources
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.csproj.GenerateResource.cache
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.csproj.CoreCompileInputs.cache
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.csproj.CopyComplete
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.exe
+D:\Market Proje\kar_zarar_rapor\obj\Debug\kar_zarar_rapor.pdb
