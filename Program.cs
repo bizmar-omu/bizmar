@@ -16,8 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new urunekleme());
-            Application.Run(new coktanazaurunlistesi());
+            Application.Run(new girissayfasi());
         }
     }
 }

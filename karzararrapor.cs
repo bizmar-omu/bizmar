@@ -11,7 +11,7 @@ using bizmar;
 
 namespace kar_zarar_rapor
 {
-    public partial class Form1 : Form
+    public partial class Karzarar : Form
     {
         pesinSatis psatis = new pesinSatis();   
         cariSatis cariSatis= new cariSatis();
@@ -21,7 +21,7 @@ namespace kar_zarar_rapor
         int ctoplam = 0;
         int itoplam = 0;
 
-        public Form1()
+        public Karzarar()
         {
             InitializeComponent();
         }

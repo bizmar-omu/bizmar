@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 ﻿<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <configSections>
     <section name="entityFramework" xdt:Transform="Remove" xdt:Locator="Match(name)" />

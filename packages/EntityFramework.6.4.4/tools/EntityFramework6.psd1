@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 #
 # Module manifest for module 'EntityFramework6'
 #

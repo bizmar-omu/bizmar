@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 param($installPath, $toolsPath, $package, $project)
 
 # NB: Not set for scripts in PowerShell 2.0

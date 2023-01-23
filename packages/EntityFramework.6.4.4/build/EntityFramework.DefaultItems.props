@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 <Project>
   <ItemGroup Condition="'$(EnableDefaultEntityDeployItems)' == 'True'">
     <EntityDeploy Include="**/*.edmx" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />

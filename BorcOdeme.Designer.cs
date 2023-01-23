@@ -1,6 +1,6 @@
 ﻿namespace a
 {
-    partial class Form1
+    partial class BorcOdeme
     {
         /// <summary>
         /// Required designer variable.

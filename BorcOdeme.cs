@@ -11,9 +11,9 @@ using bizmar;
 
 namespace a
 {
-    public partial class Form1 : Form
+    public partial class BorcOdeme : Form
     {
-        public Form1()
+        public BorcOdeme()
         {
             InitializeComponent();
         }

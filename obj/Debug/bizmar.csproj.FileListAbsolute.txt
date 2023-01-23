@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Z:\bizmar\bin\Debug\bizmar.exe.config
 Z:\bizmar\bin\Debug\bizmar.exe
 Z:\bizmar\bin\Debug\bizmar.pdb
@@ -47,3 +46,6 @@ C:\Users\Terea\source\repos\a\obj\Debug\a.MusteriBorcOdeme.resources
 C:\Users\Terea\source\repos\a\obj\Debug\a.MusteriBorcRaporEkrani.resources
 C:\Users\Terea\source\repos\a\obj\Debug\a.Form2.resources
 C:\Users\Terea\source\repos\a\obj\Debug\a.TedarikciBorcRaporEkrani.resources
+C:\Users\Terea\source\repos\a\obj\Debug\a.BorcOdeme.resources
+C:\Users\Terea\source\repos\a\obj\Debug\kar_zarar_rapor.Karzarar.resources
+C:\Users\Terea\source\repos\a\obj\Debug\bizmar.raporlar.resources

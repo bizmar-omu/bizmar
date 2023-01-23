@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 ﻿param($installPath, $toolsPath, $package, $project)
 
 if (Get-Service | ?{ $_.Name -eq 'MSSQL$SQLEXPRESS' -and $_.Status -eq 'Running' })

@@ -1,6 +1,6 @@
 ﻿namespace kar_zarar_rapor
 {
-    partial class Form1
+    partial class Karzarar
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
