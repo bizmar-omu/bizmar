@@ -16,7 +16,7 @@ namespace bizmar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ikitarihgrafik());
+            Application.Run(new urunekleme());
         }
     }
 }

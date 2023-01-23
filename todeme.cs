@@ -12,15 +12,13 @@ namespace bizmar
     using System;
     using System.Collections.Generic;
     
-    public partial class cariSatisUrunu
+    public partial class todeme
     {
-        public int csuNo { get; set; }
-        public string csuBarkodNo { get; set; }
-        public string csuAd { get; set; }
-        public int csuMiktar { get; set; }
-        public double csuFiyat { get; set; }
-        public int csNo { get; set; }
+        public int todemeNo { get; set; }
+        public int odenenTutar { get; set; }
+        public System.DateTime odenenTarih { get; set; }
+        public int tNo { get; set; }
     
-        public virtual cariSatis cariSatis { get; set; }
+        public virtual tedarikci tedarikci { get; set; }
     }
 }

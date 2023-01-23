@@ -34,8 +34,11 @@ namespace bizmar
         public virtual DbSet<pesinSatis> pesinSatis { get; set; }
         public virtual DbSet<pesinSatisUrunu> pesinSatisUrunu { get; set; }
         public virtual DbSet<sayac> sayac { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tedarikci> tedarikci { get; set; }
+        public virtual DbSet<todeme> todeme { get; set; }
         public virtual DbSet<urun> urun { get; set; }
+        public virtual DbSet<urunListesi> urunListesi { get; set; }
         public virtual DbSet<market> market { get; set; }
     }
 }
