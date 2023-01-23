@@ -12,26 +12,27 @@ namespace WindowsFormsApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class irsaliye
+    public partial class urunListesi
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public irsaliye()
+        public urunListesi()
         {
-            this.irsaliyeUrunu = new HashSet<irsaliyeUrunu>();
-            this.urun = new HashSet<urun>();
+            this.cariSatis = new HashSet<cariSatis>();
+            this.irsaliye = new HashSet<irsaliye>();
+            this.pesinSatis = new HashSet<pesinSatis>();
         }
     
-        public int irsaliyeNo { get; set; }
-        public System.DateTime irsaliyeTarih { get; set; }
-        public double irsaliyeTutar { get; set; }
-        public Nullable<int> ulNo { get; set; }
-        public Nullable<int> tNo { get; set; }
+        public int ulNo { get; set; }
+        public Nullable<int> urunKodu { get; set; }
+        public double birimFiyat { get; set; }
+        public int miktar { get; set; }
     
-        public virtual tedarikci tedarikci { get; set; }
-        public virtual urunListesi urunListesi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<irsaliyeUrunu> irsaliyeUrunu { get; set; }
+        public virtual ICollection<cariSatis> cariSatis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<urun> urun { get; set; }
+        public virtual ICollection<irsaliye> irsaliye { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<pesinSatis> pesinSatis { get; set; }
+        public virtual urun urun { get; set; }
     }
 }

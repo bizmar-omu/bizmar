@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
         public tedarikci()
         {
             this.irsaliye = new HashSet<irsaliye>();
+            this.todeme = new HashSet<todeme>();
         }
     
         public int tNo { get; set; }
@@ -26,5 +27,7 @@ namespace WindowsFormsApp1
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<irsaliye> irsaliye { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<todeme> todeme { get; set; }
     }
 }

@@ -23,8 +23,10 @@ namespace WindowsFormsApp1
         public int psNo { get; set; }
         public System.DateTime psTarih { get; set; }
         public double psTutar { get; set; }
+        public Nullable<int> ulNo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<pesinSatisUrunu> pesinSatisUrunu { get; set; }
+        public virtual urunListesi urunListesi { get; set; }
     }
 }

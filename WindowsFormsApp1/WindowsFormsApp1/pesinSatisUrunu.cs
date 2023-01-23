@@ -16,10 +16,10 @@ namespace WindowsFormsApp1
     {
         public int psuNo { get; set; }
         public string psuBarkodNo { get; set; }
+        public string psuAd { get; set; }
         public int psuMiktar { get; set; }
         public double psuFiyat { get; set; }
         public int psNo { get; set; }
-        public string psuAd { get; set; }
     
         public virtual pesinSatis pesinSatis { get; set; }
     }

@@ -18,15 +18,20 @@ namespace WindowsFormsApp1
         public urun()
         {
             this.sayac = new HashSet<sayac>();
+            this.urunListesi = new HashSet<urunListesi>();
         }
     
         public int urunKodu { get; set; }
         public string barkodNo { get; set; }
         public int stokMiktari { get; set; }
         public double satisFiyati { get; set; }
+        public int irsaliyeNo { get; set; }
         public string urunAd { get; set; }
     
+        public virtual irsaliye irsaliye { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<sayac> sayac { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<urunListesi> urunListesi { get; set; }
     }
 }

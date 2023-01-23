@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class coktanazaurunlistesi : Form
     {
-        public Form1()
+        public coktanazaurunlistesi()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (mahalleMarketiEntities db = new mahalleMarketiEntities())
+            using (mahalleMarketiEntities1 db = new mahalleMarketiEntities1())
             {
                 var urunler = db.sayac.Join(db.urun, s => s.urunKodu, u => u.urunKodu, 
                     (s, u) => new { urunKodu = s.urunKodu,

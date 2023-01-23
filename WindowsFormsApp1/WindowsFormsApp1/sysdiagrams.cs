@@ -12,15 +12,12 @@ namespace WindowsFormsApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class irsaliyeUrunu
+    public partial class sysdiagrams
     {
-        public int iuNo { get; set; }
-        public string iuBarkodNo { get; set; }
-        public string iuAd { get; set; }
-        public int iuMiktar { get; set; }
-        public double iuFiyat { get; set; }
-        public int irsaliyeNo { get; set; }
-    
-        public virtual irsaliye irsaliye { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

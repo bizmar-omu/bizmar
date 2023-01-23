@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class mahalleMarketiEntities : DbContext
+    public partial class mahalleMarketiEntities1 : DbContext
     {
-        public mahalleMarketiEntities()
-            : base("name=mahalleMarketiEntities")
+        public mahalleMarketiEntities1()
+            : base("name=mahalleMarketiEntities1")
         {
         }
     
@@ -34,8 +34,11 @@ namespace WindowsFormsApp1
         public virtual DbSet<pesinSatis> pesinSatis { get; set; }
         public virtual DbSet<pesinSatisUrunu> pesinSatisUrunu { get; set; }
         public virtual DbSet<sayac> sayac { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tedarikci> tedarikci { get; set; }
+        public virtual DbSet<todeme> todeme { get; set; }
         public virtual DbSet<urun> urun { get; set; }
+        public virtual DbSet<urunListesi> urunListesi { get; set; }
         public virtual DbSet<market> market { get; set; }
     }
 }

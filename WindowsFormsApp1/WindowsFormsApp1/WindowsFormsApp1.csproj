@@ -11,7 +11,6 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,11 +51,11 @@
     <Compile Include="cariSatisUrunu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="coktanazaurunlistesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="coktanazaurunlistesi.Designer.cs">
+      <DependentUpon>coktanazaurunlistesi.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
     <Compile Include="Program.cs" />
@@ -103,14 +102,23 @@
     <Compile Include="sayac.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tedarikci.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="todeme.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="urunListesi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="coktanazaurunlistesi.resx">
+      <DependentUpon>coktanazaurunlistesi.cs</DependentUpon>
     </EmbeddedResource>
 >>>>>>> 9ec7756 (veriler datagridviewe coktan aza dogru siralandi)
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -121,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

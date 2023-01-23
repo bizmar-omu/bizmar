@@ -12,15 +12,13 @@ namespace WindowsFormsApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class irsaliyeUrunu
+    public partial class todeme
     {
-        public int iuNo { get; set; }
-        public string iuBarkodNo { get; set; }
-        public string iuAd { get; set; }
-        public int iuMiktar { get; set; }
-        public double iuFiyat { get; set; }
-        public int irsaliyeNo { get; set; }
+        public int todemeNo { get; set; }
+        public int odenenTutar { get; set; }
+        public System.DateTime odenenTarih { get; set; }
+        public int tNo { get; set; }
     
-        public virtual irsaliye irsaliye { get; set; }
+        public virtual tedarikci tedarikci { get; set; }
     }
 }
