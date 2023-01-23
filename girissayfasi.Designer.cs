@@ -41,37 +41,41 @@ namespace bizmar
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 166);
+            this.label1.Location = new System.Drawing.Point(351, 204);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı: ";
             // 
             // txtKulAdi
             // 
             this.txtKulAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKulAdi.Location = new System.Drawing.Point(370, 163);
+            this.txtKulAdi.Location = new System.Drawing.Point(493, 201);
+            this.txtKulAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKulAdi.Name = "txtKulAdi";
-            this.txtKulAdi.Size = new System.Drawing.Size(149, 26);
+            this.txtKulAdi.Size = new System.Drawing.Size(197, 30);
             this.txtKulAdi.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 210);
+            this.label2.Location = new System.Drawing.Point(419, 258);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Şifre: ";
             // 
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSifre.Location = new System.Drawing.Point(370, 207);
+            this.txtSifre.Location = new System.Drawing.Point(493, 255);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(149, 26);
+            this.txtSifre.Size = new System.Drawing.Size(197, 30);
             this.txtSifre.TabIndex = 3;
             // 
             // btnGiris
@@ -79,9 +83,10 @@ namespace bizmar
             this.btnGiris.BackColor = System.Drawing.Color.Lime;
             this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiris.Location = new System.Drawing.Point(370, 251);
+            this.btnGiris.Location = new System.Drawing.Point(493, 309);
+            this.btnGiris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(149, 53);
+            this.btnGiris.Size = new System.Drawing.Size(199, 65);
             this.btnGiris.TabIndex = 4;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = false;
@@ -91,27 +96,30 @@ namespace bizmar
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(287, 74);
+            this.label3.Location = new System.Drawing.Point(383, 91);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 37);
+            this.label3.Size = new System.Drawing.Size(262, 46);
             this.label3.TabIndex = 5;
             this.label3.Text = "Bizim Market";
             // 
-            // Form1
+            // girissayfasi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 398);
+            this.ClientSize = new System.Drawing.Size(1067, 490);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtKulAdi);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "girissayfasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.girissayfasi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

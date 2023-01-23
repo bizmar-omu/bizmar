@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -44,6 +44,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,11 +57,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaSatisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaSatisEkrani.Designer.cs">
+      <DependentUpon>anaSatisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cari.Designer.cs">
+      <DependentUpon>cari.cs</DependentUpon>
+    </Compile>
     <Compile Include="cariSatis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="cariSatisUrunu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="girissayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="girissayfasi.Designer.cs">
+      <DependentUpon>girissayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikitarihgrafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikitarihgrafik.Designer.cs">
+      <DependentUpon>ikitarihgrafik.cs</DependentUpon>
     </Compile>
     <Compile Include="irsaliye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -88,14 +120,32 @@
     <Compile Include="musteri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="musteriKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriKayit.Designer.cs">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="odeme.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pesin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pesin.Designer.cs">
+      <DependentUpon>pesin.cs</DependentUpon>
     </Compile>
     <Compile Include="pesinSatis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="pesinSatisUrunu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="satisTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satisTuru.Designer.cs">
+      <DependentUpon>satisTuru.cs</DependentUpon>
     </Compile>
     <Compile Include="sayac.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -123,6 +173,30 @@
     <Compile Include="urunListesi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="anaSatisEkrani.resx">
+      <DependentUpon>anaSatisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cari.resx">
+      <DependentUpon>cari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="girissayfasi.resx">
+      <DependentUpon>girissayfasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikitarihgrafik.resx">
+      <DependentUpon>ikitarihgrafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriKayit.resx">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pesin.resx">
+      <DependentUpon>pesin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satisTuru.resx">
+      <DependentUpon>satisTuru.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="urunekleme.resx">
       <DependentUpon>urunekleme.cs</DependentUpon>
     </EmbeddedResource>

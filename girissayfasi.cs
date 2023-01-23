@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using bizmar.models;
+using bizmar;
 
 namespace bizmar
 {
@@ -21,7 +21,7 @@ namespace bizmar
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            using(EFDBEntities db = new EFDBEntities())
+            using(mahalleMarketiEntities db = new mahalleMarketiEntities())
             {
                 String girilenKulAdi = txtKulAdi.Text;
                 String girilenSifre = txtSifre.Text;
@@ -40,6 +40,11 @@ namespace bizmar
                     MessageBox.Show("Kayıt bulunamadı");
                 }
             }
+        }
+
+        private void girissayfasi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

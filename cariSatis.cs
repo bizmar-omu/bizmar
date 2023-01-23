@@ -23,9 +23,11 @@ namespace bizmar
         public int csNo { get; set; }
         public System.DateTime csTarih { get; set; }
         public double csTutar { get; set; }
+        public Nullable<int> ulNo { get; set; }
         public Nullable<int> mNo { get; set; }
+    
         public virtual musteri musteri { get; set; }
-        
+        public virtual urunListesi urunListesi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cariSatisUrunu> cariSatisUrunu { get; set; }
     }

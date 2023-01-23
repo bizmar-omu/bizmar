@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using bizmar;
 
 namespace bizmar
 {
@@ -94,6 +95,11 @@ namespace bizmar
         private void btnYansit_Click(object sender, EventArgs e)
         {
             grafigeYansit();
+        }
+
+        private void ikitarihgrafik_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
